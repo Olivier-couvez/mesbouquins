@@ -1,0 +1,6 @@
+C:\Users\TPCDA\Desktop\olivier\mesbouquins\Application\MesBouquins\obj\Debug\net5.0-windows\MesBouquins.csprojAssemblyReference.cache
+C:\Users\TPCDA\Desktop\olivier\mesbouquins\Application\MesBouquins\obj\Debug\net5.0-windows\MainWindow.g.cs
+C:\Users\TPCDA\Desktop\olivier\mesbouquins\Application\MesBouquins\obj\Debug\net5.0-windows\Views\Bouquins.g.cs
+C:\Users\TPCDA\Desktop\olivier\mesbouquins\Application\MesBouquins\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\TPCDA\Desktop\olivier\mesbouquins\Application\MesBouquins\obj\Debug\net5.0-windows\MesBouquins_MarkupCompile.cache
+C:\Users\TPCDA\Desktop\olivier\mesbouquins\Application\MesBouquins\obj\Debug\net5.0-windows\MesBouquins_MarkupCompile.lref

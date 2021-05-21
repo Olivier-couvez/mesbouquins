@@ -10,7 +10,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace MesBouquins.Views
@@ -18,7 +17,7 @@ namespace MesBouquins.Views
     /// <summary>
     /// Logique d'interaction pour Bouquins.xaml
     /// </summary>
-    public partial class Bouquins : Page
+    public partial class Bouquins : Window
     {
         public Bouquins()
         {

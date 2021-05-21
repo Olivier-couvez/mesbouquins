@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
 
+
 namespace MesBouquins
 {
-    class BddMysqlCourses
+    class Dbconnect
     {
         private MySqlConnection Connexion;
         private string AdrServeur, NomBdd, Utilisateur, MotPasse;
@@ -17,7 +18,7 @@ namespace MesBouquins
         private string _erreur;
         private bool EstConnecte;
 
-        public BddMysqlCourses(string Serv, int Port, string Bdd, string User, string Pass)
+        public Dbconnect(string Serv, int Port, string Bdd, string User, string Pass)
         {
             AdrServeur = Serv;
             NomBdd = Bdd;
@@ -67,7 +68,6 @@ namespace MesBouquins
         {
             get { return _erreur; }
         }
-
         public MySqlDataReader RequeteSql(string Requete)
         {
             MySqlCommand CmdSql = new MySqlCommand(Requete, Connexion);
@@ -107,4 +107,3 @@ namespace MesBouquins
         }
     }
 }
-
