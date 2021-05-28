@@ -1,0 +1,810 @@
+MySQL Workbench Migration Wizard Report
+
+Date: Thu May 27 00:40:31 2021
+Source: Microsoft Access 1.0.0
+Target: MySQL 5.7.31
+------------------------------------------------------------------------------------
+
+I. Migration
+
+1. Summary
+
+Number of migrated schemas: 1
+
+1. Gestion Biblio 2020
+Source Schema:   Gestion Biblio 2020
+
+- Tables:             37
+- Triggers:           0
+- Views:              0
+- Stored Procedures:  0
+- Functions:          0
+
+
+2. Migration Issues
+
+
+3. Object Creation Issues
+
+
+4. Migration Details
+
+4.1. Table Gestion Biblio 2020.Tbl_ISO3166-1 (Tbl_ISO3166-1)
+
+Columns:
+  - ISO_3166-1_Num SMALLINT(5)    
+  - ISO_3166-1_Alpha3 VARCHAR(3)    
+  - ISO_3166-1_Alpha2 VARCHAR(2)    
+  - ISO_3166-1_Nom_Francais VARCHAR(100)    
+  - ISO_3166-1_Nom VARCHAR(100)    
+
+Foreign Keys:
+
+Indices:
+  - SO_3166-1_Num (ISO_3166-1_Num)
+
+
+4.2. Table Gestion Biblio 2020.Tbl_Dernieres_Fiches_Modifiees (Tbl_Dernieres_Fiches_Modifiees)
+
+Columns:
+  - Id_Fiche_Modifiee INT(10)    
+  - Id_Livre INT(10)    
+  - Date_Modification DATETIME(6)    
+  - Heure_Modification DATETIME(6)    
+
+Foreign Keys:
+
+Indices:
+  - PrimaryKey (Id_Fiche_Modifiee)
+
+
+4.3. Table Gestion Biblio 2020.Tbl_Edition (Tbl_Edition)
+
+Columns:
+  - Id_Edition INT(10)    
+  - Edition_Nom VARCHAR(70)    
+  - Id_Logo_Edition INT(10)    
+  - Site_Internet_Edition VARCHAR(100)    
+
+Foreign Keys:
+
+Indices:
+  - PrimaryKey (Id_Edition)
+
+
+4.4. Table Gestion Biblio 2020.Tbl_Oeuvre_Pseudos (Tbl_Oeuvre_Pseudos)
+
+Columns:
+  - Id_Oeuvre_Pseudo INT(10)    
+  - Id_Oeuvre INT(10)    
+  - Id_Pseudo INT(10)    
+  - Fonction VARCHAR(50)    
+
+Foreign Keys:
+  - {9D3481E5-78D5-4415-958F-872C2D5E4F27} (Id_Pseudo) ON Tbl_Pseudo (Id_Pseudo)
+  - {DF322F43-4AE6-417E-9CB1-E9894CB0172A} (Id_Oeuvre) ON Tbl_Oeuvres (Id_Oeuvre)
+
+Indices:
+  - PrimaryKey (Id_Oeuvre_Pseudo)
+
+
+4.5. Table Gestion Biblio 2020.Tbl_Mot_Cle (Tbl_Mot_Cle)
+
+Columns:
+  - Id_Mot_Cle INT(10)    
+  - Mot_Cle_Nom VARCHAR(30)    
+
+Foreign Keys:
+
+Indices:
+  - PrimaryKey (Id_Mot_Cle)
+
+
+4.6. Table Gestion Biblio 2020.Tbl_Auteur_Fonctions (Tbl_Auteur_Fonctions)
+
+Columns:
+  - Id_Auteur_Fonctions INT(10)    
+  - Id_Auteur INT(10)    
+  - Id_Fonction INT(10)    
+
+Foreign Keys:
+  - {99238FFC-1CC8-471D-9480-9B5D6A7CC3A7} (Id_Auteur) ON Tbl_Auteurs (Id_Auteur)
+  - {C1AD01D3-60BF-4757-B598-43D670E86FBF} (Id_Fonction) ON Tbl_Fonctions (Id_Fonction)
+
+Indices:
+  - PrimaryKey (Id_Auteur_Fonctions)
+
+
+4.7. Table Gestion Biblio 2020.Tbl_Livre (Tbl_Livre)
+
+Columns:
+  - Id_Livre INT(10)    
+  - Id_Reference INT(10)    
+  - Livre_Numero VARCHAR(20)    
+  - Livre_Titre VARCHAR(150)    
+  - Livre_Sous_Titre VARCHAR(200)    
+  - Livre_Quantite INT(10)    
+  - Id_Edition INT(10)    
+  - Id_Collection INT(10)    
+  - Livre_Parution VARCHAR(4)    
+  - Livre_Cycle_Nom1 VARCHAR(80)    
+  - Livre_Cycle_Tome1 VARCHAR(10)    
+  - Livre_Cycle_Nom2 VARCHAR(80)    
+  - Livre_Cycle_Tome2 VARCHAR(5)    
+  - Livre_Cycle_Nom3 VARCHAR(80)    
+  - Livre_Cycle_Tome3 VARCHAR(5)    
+  - Livre_Infos LONGTEXT    
+  - Id_Format INT(10)    
+  - Livre_ISBN VARCHAR(17)    
+  - Livre_EAN VARCHAR(13)    
+  - Livre_Code_Prix VARCHAR(20)    
+  - Livre_Pages SMALLINT(5)    
+  - Livre_Couverture VARCHAR(15)    
+  - Id_Langue INT(10)    
+  - Livre_Appreciation SMALLINT(5)    
+  - Livre_Controle TINYINT(1)    
+  - Livre_Titre_Original VARCHAR(90)    
+  - Livre_Date_Creation VARCHAR(4)    
+  - Id_Etat INT(10)    
+  - Id_Statut INT(10)    
+  - Livre_Details LONGTEXT    
+  - Livre_Date_Achat DATETIME(6)    
+  - Livre_Prix_Achat DECIMAL(19,4)    
+  - Livre_Cote DECIMAL(19,4)    
+  - Livre_Info_Achat VARCHAR(100)    
+  - Livre_Lu TINYINT(1)    
+  - Livre_Date_Modification DATETIME(6)    
+  - Id_Version INT(10)    
+  - Id_Logo INT(10)    
+  - Livre_Nouveau_Format TINYINT(1)    
+  - Notice_BNF VARCHAR(60)    
+  - Livre_Absence_Couverture TINYINT(1)    
+  - Id_Stockage_Images INT(10)    
+  - Livre_Fiche_A_Completer TINYINT(1)    
+  - Livre_Fiche_Ok TINYINT(1)    
+  - Numero_Notice VARCHAR(13)    
+  - Livre_Num_Tri INT(10)    
+
+Foreign Keys:
+  - {1D2E9245-6973-4308-8C8D-CDB45E89C83A} (Id_Logo) ON Tbl_Logo (Id_Logo)
+  - {1EC18C1E-E723-4B28-B05D-BEC3DDCDFFD0} (Id_Etat) ON Tbl_Etat (Id_Etat)
+  - {228B292B-B08B-4AD2-894E-43E0BB0E4699} (Id_Edition) ON Tbl_Edition (Id_Edition)
+  - {23F3C247-F9E5-4A94-9174-189DFB45BFA4} (Id_Format) ON Tbl_Format (Id_Format)
+  - {2AEF1310-4E05-4A25-BBCD-5FBF8B125AAA} (Id_Langue) ON Tbl_Langue (Id_Langue)
+  - {7CD973CB-7F5F-47C7-8768-A7FFE96E2902} (Id_Collection) ON Tbl_Collection (Id_Collection)
+  - {91889A15-1869-45DB-93E5-85CBA908202C} (Id_Statut) ON Tbl_Statut (Id_Statut)
+  - {C61DC877-73CE-47AF-A972-49BE9FBEF01B} (Id_Version) ON Tbl_Version (Id_Version)
+  - {E3F116A9-E1CA-4289-A6DC-1DE010694E03} (Id_Stockage_Images) ON Tbl_Stockage_Images (Id_Stockage_Images)
+
+Indices:
+  - PrimaryKey (Id_Livre)
+  - Numéro_Notice (Numero_Notice)
+  - Tbl_LivreId_Titre (Id_Reference)
+
+
+4.8. Table Gestion Biblio 2020.Tbl_Cycle (Tbl_Cycle)
+
+Columns:
+  - Id_Cycle INT(10)    
+  - Cycle_Nom VARCHAR(80)    
+  - Cycle_Infos VARCHAR(50)    
+
+Foreign Keys:
+
+Indices:
+  - PrimaryKey (Id_Cycle)
+
+
+4.9. Table Gestion Biblio 2020.Tbl_Auteurs (Tbl_Auteurs)
+
+Columns:
+  - Id_Auteur INT(10)    
+  - Auteur_Prenom VARCHAR(255)    
+  - Auteur_Nom VARCHAR(255)    
+  - Auteur_Sexe VARCHAR(1)    
+  - Id_Pays INT(10)    
+  - Auteur_Date_Naissance VARCHAR(255)    
+  - Auteur_Lieu_Naissance VARCHAR(255)    
+  - Auteur_Date_Deces VARCHAR(255)    
+  - Auteur_Lieu_Deces VARCHAR(255)    
+  - Auteur_Notes LONGTEXT    
+  - Auteur_Photo VARCHAR(20)    
+  - Id_Reference INT(10)    
+  - Auteur_Statut VARCHAR(20)    
+  - Notice_BNF VARCHAR(80)    
+  - Lien_Wiki VARCHAR(80)    
+  - Auteur_Date_Modification DATETIME(6)    
+  - Numero_Notice VARCHAR(13)    
+  - Auteur_Nom_Particule VARCHAR(15)    
+
+Foreign Keys:
+
+Indices:
+  - PrimaryKey (Id_Auteur)
+  - Numéro_Notice (Numero_Notice)
+
+
+4.10. Table Gestion Biblio 2020.Tbl_Mini_Icones (Tbl_Mini_Icones)
+
+Columns:
+  - Id_Mini_Icone INT(10)    
+  - Mini_Icone_Infos VARCHAR(100)    
+  - Mini_Icone_Image LONGBLOB    
+
+Foreign Keys:
+
+Indices:
+  - PrimaryKey (Id_Mini_Icone)
+
+
+4.11. Table Gestion Biblio 2020.Tbl_Livre_Cycle (Tbl_Livre_Cycle)
+
+Columns:
+  - Id_Livre_Cycle INT(10)    
+  - Id_Livre INT(10)    
+  - Id_Cycle INT(10)    
+  - Cycle_Tome VARCHAR(10)    
+
+Foreign Keys:
+  - {AE7CC954-DEE6-4127-AF3B-94CEA790B33D} (Id_Livre) ON Tbl_Livre (Id_Livre)
+  - {BCA0F79B-5DB8-4F11-8790-23C345EBE604} (Id_Cycle) ON Tbl_Cycle (Id_Cycle)
+
+Indices:
+  - PrimaryKey (Id_Livre_Cycle)
+
+
+4.12. Table Gestion Biblio 2020.Tbl_Pseudo (Tbl_Pseudo)
+
+Columns:
+  - Id_Pseudo INT(10)    
+  - Pseudo_Prenom VARCHAR(50)    
+  - Pseudo_Nom VARCHAR(50)    
+  - Id_Auteur INT(10)    
+  - Id_Pays INT(10)    
+  - Pseudo_Statut VARCHAR(20)    
+  - Pseudo_Sexe VARCHAR(1)    
+  - Pseudo_Fonction_Principale VARCHAR(30)    
+  - Pseudo_Naissance VARCHAR(5)    
+  - Pseudo_Deces VARCHAR(5)    
+  - Pseudo_Nom_Sans_Accents VARCHAR(50)    
+  - Pseudo_Nom_Particule VARCHAR(15)    
+  - Id_Mini_Icone INT(10)    
+
+Foreign Keys:
+
+Indices:
+  - PrimaryKey (Id_Pseudo)
+
+
+4.13. Table Gestion Biblio 2020.Tbl_Logo (Tbl_Logo)
+
+Columns:
+  - Id_Logo INT(10)    
+  - Logo_Infos VARCHAR(100)    
+  - Logo_Image LONGBLOB    
+
+Foreign Keys:
+
+Indices:
+  - PrimaryKey (Id_Logo)
+
+
+4.14. Table Gestion Biblio 2020.Tbl_Etat (Tbl_Etat)
+
+Columns:
+  - Id_Etat INT(10)    
+  - Etat_Livre VARCHAR(20)    
+
+Foreign Keys:
+
+Indices:
+  - PrimaryKey (Id_Etat)
+
+
+4.15. Table Gestion Biblio 2020.Tbl_Livre_Pseudo (Tbl_Livre_Pseudo)
+
+Columns:
+  - Id_Livre_Pseudo INT(10)    
+  - Id_Livre INT(10)    
+  - Id_Pseudo INT(10)    
+  - Fonction VARCHAR(50)    
+
+Foreign Keys:
+  - {6BDDB2FA-A064-4929-8359-1767C3A582AC} (Id_Livre) ON Tbl_Livre (Id_Livre)
+  - {EE7B2345-6162-424B-9847-7CA752924DE0} (Id_Pseudo) ON Tbl_Pseudo (Id_Pseudo)
+
+Indices:
+  - PrimaryKey (Id_Livre_Pseudo)
+
+
+4.16. Table Gestion Biblio 2020.Tbl_Livre_Recompense (Tbl_Livre_Recompense)
+
+Columns:
+  - Id_Livre_Recompense INT(10)    
+  - Id_Livre INT(10)    
+  - Id_Recompense INT(10)    
+  - Categorie_Recompense VARCHAR(50)    
+  - Annee_Recompense VARCHAR(4)    
+
+Foreign Keys:
+  - {AA07C704-B665-4235-80FE-A9228C28E78E} (Id_Recompense) ON Tbl_Recompense (Id_Recompense)
+  - {F7B33EA1-C7B8-4BFD-8A63-984F6A511F05} (Id_Livre) ON Tbl_Livre (Id_Livre)
+
+Indices:
+  - PrimaryKey (Id_Livre_Recompense)
+
+
+4.17. Table Gestion Biblio 2020.Tbl_Derniers_Pseudos_Utilises (Tbl_Derniers_Pseudos_Utilises)
+
+Columns:
+  - Id_Pseudo_Utilise INT(10)    
+  - Id_Pseudo INT(10)    
+  - Date_Modification DATETIME(6)    
+  - Heure_Modification DATETIME(6)    
+
+Foreign Keys:
+  - {154A3273-B468-4F68-B73F-5F6005DAF605} (Id_Pseudo) ON Tbl_Pseudo (Id_Pseudo)
+
+Indices:
+  - PrimaryKey (Id_Pseudo_Utilise)
+
+
+4.18. Table Gestion Biblio 2020.Tbl_Fonctions (Tbl_Fonctions)
+
+Columns:
+  - Id_Fonction INT(10)    
+  - Fonction VARCHAR(70)    
+
+Foreign Keys:
+
+Indices:
+  - PrimaryKey (Id_Fonction)
+
+
+4.19. Table Gestion Biblio 2020.Tbl_Format (Tbl_Format)
+
+Columns:
+  - Id_Format INT(10)    
+  - Format_Livre VARCHAR(25)    
+  - Image_Associee_Format VARCHAR(20)    
+
+Foreign Keys:
+
+Indices:
+  - PrimaryKey (Id_Format)
+
+
+4.20. Table Gestion Biblio 2020.Table_Recherche_Cles (Table_Recherche_Cles)
+
+Columns:
+  - Id_SC INT(10)    
+  - Id_Mot_Cle INT(10)    
+
+Foreign Keys:
+
+Indices:
+  - PrimaryKey (Id_SC)
+  - Id_Mot_Clé (Id_Mot_Cle)
+
+
+4.21. Table Gestion Biblio 2020.Tbl_Sommaire_Pseudos (Tbl_Sommaire_Pseudos)
+
+Columns:
+  - Id_Sommaire_Pseudo INT(10)    
+  - Id_Sommaire INT(10)    
+  - Id_Pseudo INT(10)    
+  - Fonction VARCHAR(50)    
+
+Foreign Keys:
+
+Indices:
+  - PrimaryKey (Id_Sommaire_Pseudo)
+
+
+4.22. Table Gestion Biblio 2020.Tbl_Couverture_Pseudo (Tbl_Couverture_Pseudo)
+
+Columns:
+  - Id_Couverture_Pseudo INT(10)    
+  - Id_Pseudo INT(10)    
+  - Id_Couverture INT(10)    
+  - Fonction VARCHAR(50)    
+
+Foreign Keys:
+  - {A79725E9-AF00-4207-9131-6A6D35CA863E} (Id_Couverture) ON Tbl_Couverture (Id_Couverture)
+  - {F8F5E2FE-3996-4467-A01C-2402A1ECDAD7} (Id_Pseudo) ON Tbl_Pseudo (Id_Pseudo)
+
+Indices:
+  - PrimaryKey (Id_Couverture_Pseudo)
+
+
+4.23. Table Gestion Biblio 2020.Tbl_Oeuvres (Tbl_Oeuvres)
+
+Columns:
+  - Id_Oeuvre INT(10)    
+  - Oeuvre_Titre_Original VARCHAR(120)    
+  - Oeuvre_Titre_Francais VARCHAR(150)    
+  - Oeuvre_Date_Parution VARCHAR(4)    
+  - Oeuvre_Type VARCHAR(30)    
+
+Foreign Keys:
+
+Indices:
+  - PrimaryKey (Id_Oeuvre)
+
+
+4.24. Table Gestion Biblio 2020.Tbl_Statut (Tbl_Statut)
+
+Columns:
+  - Id_Statut INT(10)    
+  - Statut_Livre VARCHAR(20)    
+  - Statut_Couleur_Fond INT(10)    
+  - Statut_Couleur_Texte INT(10)    
+  - Image_Associee_Statut VARCHAR(20)    
+
+Foreign Keys:
+
+Indices:
+  - PrimaryKey (Id_Statut)
+
+
+4.25. Table Gestion Biblio 2020.Tbl_Pays (Tbl_Pays)
+
+Columns:
+  - Id_Pays INT(10)    
+  - Pays_Nom VARCHAR(100)    
+  - Pays_Nom_Anglais VARCHAR(100)    
+  - Image_Mini_Drapeau LONGBLOB    
+  - ISO_3166-1_Num SMALLINT(5)    
+
+Foreign Keys:
+  - {61A3B51E-B1B2-4CB8-B2B0-A9197B45FFC9} (ISO_3166-1_Num) ON Tbl_ISO3166-1 (ISO_3166-1_Num)
+
+Indices:
+  - PrimaryKey (Id_Pays)
+
+
+4.26. Table Gestion Biblio 2020.Tbl_Recompense (Tbl_Recompense)
+
+Columns:
+  - Id_Recompense INT(10)    
+  - Recompense_Nom VARCHAR(30)    
+  - Recompense_Infos LONGTEXT    
+  - Recompense_Date_Creation INT(10)    
+  - Recompense_Date_Fin INT(10)    
+  - Recompense_Pays INT(10)    
+  - Recompense_Image VARCHAR(10)    
+
+Foreign Keys:
+
+Indices:
+  - Id_Auteur (Id_Recompense)
+  - PrimaryKey (Id_Recompense)
+
+
+4.27. Table Gestion Biblio 2020.Tbl_Liaison_Auteurs (Tbl_Liaison_Auteurs)
+
+Columns:
+  - Id_Liaison_Pseudo INT(10)    
+  - Id_Pseudo_Reference INT(10)    
+  - Id_Pseudo INT(10)    
+  - Champ1 INT(10)    
+
+Foreign Keys:
+
+Indices:
+  - PrimaryKey (Id_Liaison_Pseudo)
+
+
+4.28. Table Gestion Biblio 2020.Tbl_Livre_Mot_Cle (Tbl_Livre_Mot_Cle)
+
+Columns:
+  - Id_Livre_Mot_Cle INT(10)    
+  - Id_Livre INT(10)    
+  - Id_Mot_Cle INT(10)    
+
+Foreign Keys:
+  - {214E720F-5A1C-4C99-834A-7BAFBAEA5974} (Id_Mot_Cle) ON Tbl_Mot_Cle (Id_Mot_Cle)
+  - {28C0BC76-A4F2-4D8F-82FB-1A42AA4494FD} (Id_Livre) ON Tbl_Livre (Id_Livre)
+
+Indices:
+  - PrimaryKey (Id_Livre_Mot_Cle)
+
+
+4.29. Table Gestion Biblio 2020.Tbl_Stockage_Images (Tbl_Stockage_Images)
+
+Columns:
+  - Id_Stockage_Images INT(10)    
+  - Id_Edition INT(10)    
+  - Id_Collection INT(10)    
+  - Chemin_Stockage_Images VARCHAR(80)    
+  - Nom_Stockage_Image VARCHAR(15)    
+  - Numerotation_Nom_Stockage_Image SMALLINT(5)    
+  - Infos_Stockage_Image VARCHAR(100)    
+  - Type_Stockage_Image VARCHAR(20)    
+  - Id_Logo INT(10)    
+
+Foreign Keys:
+
+Indices:
+  - PrimaryKey (Id_Stockage_Images)
+  - Numérotation (Numerotation_Nom_Stockage_Image)
+
+
+4.30. Table Gestion Biblio 2020.Tbl_Couverture (Tbl_Couverture)
+
+Columns:
+  - Id_Couverture INT(10)    
+  - Couverture_ISBN_EAN VARCHAR(17)    
+  - Couverture_ISBN VARCHAR(10)    
+  - Couverture_Nom VARCHAR(15)    
+  - Couverture_Annee_Creation VARCHAR(4)    
+  - Couverture_Grand_Format TINYINT(1)    
+  - Couverture_Dos TINYINT(1)    
+  - Couverture_Verso TINYINT(1)    
+  - Couverture_Infos VARCHAR(30)    
+  - Id_Version INT(10)    
+  - Couverture_Quantite SMALLINT(5)    
+  - Couverture_Stockage VARCHAR(10)    
+  - Couverture_Date_DL VARCHAR(7)    
+  - Couverture_Num_DL VARCHAR(25)    
+
+Foreign Keys:
+  - {178F7443-A83B-4F57-BDDC-A005A69BDDBE} (Id_Version) ON Tbl_Version (Id_Version)
+
+Indices:
+  - Id_Auteur (Id_Couverture)
+  - PrimaryKey (Id_Couverture)
+
+
+4.31. Table Gestion Biblio 2020.Tbl_Collection (Tbl_Collection)
+
+Columns:
+  - Id_Collection INT(10)    
+  - Collection_Nom VARCHAR(65)    
+  - Id_Logo_Collection INT(10)    
+
+Foreign Keys:
+
+Indices:
+  - PrimaryKey (Id_Collection)
+
+
+4.32. Table Gestion Biblio 2020.Tbl_Livre_Sommaires (Tbl_Livre_Sommaires)
+
+Columns:
+  - Id_Sommaire INT(10)    
+  - Id_Livre INT(10)    
+  - Position_Sommaire SMALLINT(5)    
+  - Sommaire_Page_Debut SMALLINT(5)    
+  - Sommaire_Page_Fin SMALLINT(5)    
+  - Id_Oeuvre INT(10)    
+
+Foreign Keys:
+  - {39A54087-15E3-432E-9618-3B9F9643F49B} (Id_Oeuvre) ON Tbl_Oeuvres (Id_Oeuvre)
+  - {465DD137-916A-4EC8-A491-63F3B906BB25} (Id_Livre) ON Tbl_Livre (Id_Livre)
+
+Indices:
+  - PrimaryKey (Id_Sommaire)
+
+
+4.33. Table Gestion Biblio 2020.Tbl_Livre_Couverture (Tbl_Livre_Couverture)
+
+Columns:
+  - Id_Livre_Couverture INT(10)    
+  - Id_Livre INT(10)    
+  - Id_Couverture INT(10)    
+
+Foreign Keys:
+  - {2ADA91FF-0945-4EF4-AF3B-38A09390BC57} (Id_Livre) ON Tbl_Livre (Id_Livre)
+  - {F4664395-C8BC-4D01-A014-B28D3D5775E5} (Id_Couverture) ON Tbl_Couverture (Id_Couverture)
+
+Indices:
+  - PrimaryKey (Id_Livre_Couverture)
+
+
+4.34. Table Gestion Biblio 2020.Tbl_Langue (Tbl_Langue)
+
+Columns:
+  - Id_Langue INT(10)    
+  - Langue VARCHAR(30)    
+
+Foreign Keys:
+
+Indices:
+  - PrimaryKey (Id_Langue)
+
+
+4.35. Table Gestion Biblio 2020.Tbl_Version (Tbl_Version)
+
+Columns:
+  - Id_Version INT(10)    
+  - Version_Livre VARCHAR(50)    
+
+Foreign Keys:
+
+Indices:
+  - PrimaryKey (Id_Version)
+
+
+4.36. Table Gestion Biblio 2020.Tbl_Livre_Importation (Tbl_Livre_Importation)
+
+Columns:
+  - Id_Livre INT(10)    
+  - Id_Reference INT(10)    
+  - Livre_Numero VARCHAR(20)    
+  - Livre_Titre VARCHAR(150)    
+  - Livre_Sous_Titre VARCHAR(200)    
+  - Livre_Quantite INT(10)    
+  - Id_Edition INT(10)    
+  - Id_Collection INT(10)    
+  - Livre_Parution VARCHAR(4)    
+  - Livre_Cycle_Nom1 VARCHAR(80)    
+  - Livre_Cycle_Tome1 VARCHAR(10)    
+  - Livre_Cycle_Nom2 VARCHAR(80)    
+  - Livre_Cycle_Tome2 VARCHAR(5)    
+  - Livre_Cycle_Nom3 VARCHAR(80)    
+  - Livre_Cycle_Tome3 VARCHAR(5)    
+  - Livre_Infos LONGTEXT    
+  - Id_Format INT(10)    
+  - Livre_ISBN VARCHAR(17)    
+  - Livre_EAN VARCHAR(13)    
+  - Livre_Code_Prix VARCHAR(20)    
+  - Livre_Pages SMALLINT(5)    
+  - Livre_Couverture VARCHAR(15)    
+  - Id_Langue INT(10)    
+  - Livre_Appreciation SMALLINT(5)    
+  - Livre_Controle TINYINT(1)    
+  - Livre_Titre_Original VARCHAR(90)    
+  - Livre_Date_Creation VARCHAR(4)    
+  - Id_Etat INT(10)    
+  - Id_Statut INT(10)    
+  - Livre_Details LONGTEXT    
+  - Livre_Date_Achat DATETIME(6)    
+  - Livre_Prix_Achat DECIMAL(19,4)    
+  - Livre_Cote DECIMAL(19,4)    
+  - Livre_Info_Achat VARCHAR(40)    
+  - Livre_Lu TINYINT(1)    
+  - Livre_Date_Modification DATETIME(6)    
+  - Id_Version INT(10)    
+  - Id_Logo INT(10)    
+  - Livre_Nouveau_Format TINYINT(1)    
+  - Notice_BNF VARCHAR(60)    
+  - Livre_Absence_Couverture TINYINT(1)    
+  - Id_Stockage_Images INT(10)    
+  - Livre_Fiche_A_Completer TINYINT(1)    
+  - Livre_Fiche_Ok TINYINT(1)    
+  - Numéro_Notice VARCHAR(13)    
+
+Foreign Keys:
+
+Indices:
+  - PrimaryKey (Id_Livre)
+  - Numéro_Notice (Numéro_Notice)
+  - Tbl_LivreId_Titre (Id_Reference)
+
+
+4.37. Table Gestion Biblio 2020.Tbl_Editions_Collections (Tbl_Editions_Collections)
+
+Columns:
+  - Id_Editions_Collections INT(10)    
+  - Id_Edition INT(10)    
+  - Id_Collection INT(10)    
+  - Date_Debut VARCHAR(4)    
+  - Date_Fin VARCHAR(4)    
+  - Statut_Collection VARCHAR(15)    
+  - Quantite_Livres SMALLINT(5)    
+  - Informations LONGTEXT    
+  - Genre VARCHAR(30)    
+  - Date_Modification DATETIME(6)    
+  - Archivee TINYINT(1)    
+  - Livre_Couverture VARCHAR(15)    
+  - Id_Format INT(10)    
+  - Derniere_Modification TINYINT(1)    
+  - Id_Logo INT(10)    
+  - Id_Stockage_Images INT(10)    
+  - Numerotee TINYINT(1)    
+  - Non_Numerotee TINYINT(1)    
+  - Hors_Serie TINYINT(1)    
+  - Multi_Editions TINYINT(1)    
+  - Indice_Dewey VARCHAR(20)    
+  - ISSN VARCHAR(20)    
+  - Titre_Cle VARCHAR(50)    
+  - Notice_BNF VARCHAR(60)    
+  - Numero_Notice VARCHAR(13)    
+  - BNF TINYINT(1)    
+  - Info_BNF VARCHAR(50)    
+  - Info_Numerotation VARCHAR(50)    
+  - Info_Hors_Serie VARCHAR(50)    
+  - Info_Multi_Editions VARCHAR(50)    
+  - Avancement_Collection VARCHAR(150)    
+
+Foreign Keys:
+  - {714F4561-089A-46A9-8C0A-7F3A135E578F} (Id_Stockage_Images) ON Tbl_Stockage_Images (Id_Stockage_Images)
+  - {883D5D2D-4D16-4087-8145-FC8B3C26072C} (Id_Collection) ON Tbl_Collection (Id_Collection)
+  - {F99745B6-205C-4080-9DBB-25A428BD45BC} (Id_Edition) ON Tbl_Edition (Id_Edition)
+
+Indices:
+  - PrimaryKey (Id_Editions_Collections)
+  - Numéro_Notice (Numero_Notice)
+  - Numérotée (Numerotee)
+  - Titre_Clé (Titre_Cle)
+
+
+II. Data Copy
+
+  - `Gestion Biblio 2020`.`Tbl_ISO3166-1`
+            Succeeded : copied 249 of 249 rows from ."Tbl_ISO3166-1"    
+  - `Gestion Biblio 2020`.`Tbl_Dernieres_Fiches_Modifiees`
+            Succeeded : copied 10 of 10 rows from ."Tbl_Dernieres_Fiches_Modifiees"    
+  - `Gestion Biblio 2020`.`Tbl_Edition`
+            Succeeded : copied 1489 of 1489 rows from ."Tbl_Edition"    
+  - `Gestion Biblio 2020`.`Tbl_Oeuvre_Pseudos`
+            Succeeded : copied 76448 of 76448 rows from ."Tbl_Oeuvre_Pseudos"    
+  - `Gestion Biblio 2020`.`Tbl_Mot_Cle`
+            Succeeded : copied 431 of 431 rows from ."Tbl_Mot_Cle"    
+  - `Gestion Biblio 2020`.`Tbl_Auteur_Fonctions`
+            Succeeded : copied 7841 of 7841 rows from ."Tbl_Auteur_Fonctions"    
+  - `Gestion Biblio 2020`.`Tbl_Livre`
+            Succeeded : copied 130167 of 130167 rows from ."Tbl_Livre"    
+  - `Gestion Biblio 2020`.`Tbl_Cycle`
+            Succeeded : copied 0 of 0 rows from ."Tbl_Cycle"    
+  - `Gestion Biblio 2020`.`Tbl_Auteurs`
+            Succeeded : copied 6581 of 6581 rows from ."Tbl_Auteurs"    
+  - `Gestion Biblio 2020`.`Tbl_Mini_Icones`
+            Succeeded : copied 4 of 4 rows from ."Tbl_Mini_Icones"    
+  - `Gestion Biblio 2020`.`Tbl_Livre_Cycle`
+            Succeeded : copied 0 of 0 rows from ."Tbl_Livre_Cycle"    
+  - `Gestion Biblio 2020`.`Tbl_Pseudo`
+            Succeeded : copied 30777 of 30777 rows from ."Tbl_Pseudo"    
+  - `Gestion Biblio 2020`.`Tbl_Logo`
+            Succeeded : copied 1083 of 1083 rows from ."Tbl_Logo"    
+  - `Gestion Biblio 2020`.`Tbl_Etat`
+            Succeeded : copied 4 of 4 rows from ."Tbl_Etat"    
+  - `Gestion Biblio 2020`.`Tbl_Livre_Pseudo`
+            Succeeded : copied 137852 of 137852 rows from ."Tbl_Livre_Pseudo"    
+  - `Gestion Biblio 2020`.`Tbl_Livre_Recompense`
+            Succeeded : copied 544 of 544 rows from ."Tbl_Livre_Recompense"    
+  - `Gestion Biblio 2020`.`Tbl_Derniers_Pseudos_Utilises`
+            Succeeded : copied 15 of 15 rows from ."Tbl_Derniers_Pseudos_Utilises"    
+  - `Gestion Biblio 2020`.`Tbl_Fonctions`
+            Succeeded : copied 70 of 70 rows from ."Tbl_Fonctions"    
+  - `Gestion Biblio 2020`.`Tbl_Format`
+            Succeeded : copied 4 of 4 rows from ."Tbl_Format"    
+  - `Gestion Biblio 2020`.`Table_Recherche_Cles`
+            Succeeded : copied 1 of 1 rows from ."Table_Recherche_Cles"    
+  - `Gestion Biblio 2020`.`Tbl_Sommaire_Pseudos`
+            Succeeded : copied 34477 of 34477 rows from ."Tbl_Sommaire_Pseudos"    
+  - `Gestion Biblio 2020`.`Tbl_Couverture_Pseudo`
+            Succeeded : copied 42788 of 42788 rows from ."Tbl_Couverture_Pseudo"    
+  - `Gestion Biblio 2020`.`Tbl_Oeuvres`
+            Succeeded : copied 73464 of 73464 rows from ."Tbl_Oeuvres"    
+  - `Gestion Biblio 2020`.`Tbl_Statut`
+            Succeeded : copied 14 of 14 rows from ."Tbl_Statut"    
+  - `Gestion Biblio 2020`.`Tbl_Pays`
+            Succeeded : copied 252 of 252 rows from ."Tbl_Pays"    
+  - `Gestion Biblio 2020`.`Tbl_Recompense`
+            Succeeded : copied 34 of 34 rows from ."Tbl_Recompense"    
+  - `Gestion Biblio 2020`.`Tbl_Liaison_Auteurs`
+            Succeeded : copied 33250 of 33250 rows from ."Tbl_Liaison_Auteurs"    
+  - `Gestion Biblio 2020`.`Tbl_Livre_Mot_Cle`
+            Succeeded : copied 247216 of 247216 rows from ."Tbl_Livre_Mot_Cle"    
+  - `Gestion Biblio 2020`.`Tbl_Stockage_Images`
+            Succeeded : copied 3162 of 3162 rows from ."Tbl_Stockage_Images"    
+  - `Gestion Biblio 2020`.`Tbl_Couverture`
+            Succeeded : copied 141103 of 141103 rows from ."Tbl_Couverture"    
+  - `Gestion Biblio 2020`.`Tbl_Collection`
+            Succeeded : copied 2793 of 2793 rows from ."Tbl_Collection"    
+  - `Gestion Biblio 2020`.`Tbl_Livre_Sommaires`
+            Succeeded : copied 98353 of 98353 rows from ."Tbl_Livre_Sommaires"    
+  - `Gestion Biblio 2020`.`Tbl_Livre_Couverture`
+            Succeeded : copied 140200 of 140200 rows from ."Tbl_Livre_Couverture"    
+  - `Gestion Biblio 2020`.`Tbl_Langue`
+            Succeeded : copied 5 of 5 rows from ."Tbl_Langue"    
+  - `Gestion Biblio 2020`.`Tbl_Version`
+            Succeeded : copied 11 of 11 rows from ."Tbl_Version"    
+  - `Gestion Biblio 2020`.`Tbl_Livre_Importation`
+            Succeeded : copied 0 of 0 rows from ."Tbl_Livre_Importation"    
+  - `Gestion Biblio 2020`.`Tbl_Editions_Collections`
+            Succeeded : copied 481 of 481 rows from ."Tbl_Editions_Collections"    
+
+
