@@ -18,7 +18,7 @@ namespace MesBouquins
         {
         }
 
-        public bool AjouterClub(Livres UnClub)
+        public bool AjouterLivre(Livres UnLivre)
         {
             bool opeOK = false;
             try
@@ -32,11 +32,11 @@ namespace MesBouquins
                 string bddMdp = Convert.ToString(ConnectionStrings["mdp"]);
 
                 Connex = new Dbconnect(bddServeur, bddPort, bddBase, bddIdent, bddMdp);
-                //Connex = new Dbconnect("secuoli.freeboxos.fr", 3306, "gestioncourses", "amoi", "");
+
                 if (Connex.OuvrirConnexion())
                 {
-                    string requete = "INSERT INTO `club` (`Nom`, `Adresse`, `CodePostal`, `Ville`) " +
-                        "VALUES ('" + UnClub.Nom + "', '" + UnClub.Adresse + "', '" + UnClub.Cp + "', '" + UnClub.Ville + "')";
+                    string requete = "INSERT INTO `tbl_livre` (`Id_Reference`, `Livre_Numero`, `Livre_Titre`) " +
+                        "VALUES ('" + UnLivre.Id_Reference + "', '" + UnLivre.Livre_Numero + "', '" + UnLivre.Livre_Titre + "')";
                     Connex.RequeteNoData(requete);
                     opeOK = true;
                 }
@@ -49,7 +49,7 @@ namespace MesBouquins
             return opeOK;
         }
 
-        public (bool, string) ModifierClub(Livres UnClub, int IdClub)
+        public (bool, string) ModifierLivre(Livres Unlivre, int IdLivre)
         {
             bool opeOK = false;
             int ligneMod = 0;
@@ -68,7 +68,7 @@ namespace MesBouquins
                 //Connex = new Dbconnect("secuoli.freeboxos.fr", 3306, "gestioncourses", "amoi", "");
                 if (Connex.OuvrirConnexion())
                 {
-                    string requete = "UPDATE club SET `Nom`= '" + UnClub.Nom + "', `Adresse`= '" + UnClub.Adresse + "', `CodePostal`= '" + UnClub.Cp + "', `Ville`= '" + UnClub.Ville + "' WHERE IdClub = " + IdClub + "";
+                    string requete = "UPDATE club SET `Id_Reference`= '" + Unlivre.Id_Reference + "', `Livre_Numero`= '" + Unlivre.Livre_Numero + "', `Livre_Titre`= '" + Unlivre.Livre_Titre + "' WHERE Id_Livre = " + IdLivre + "";
                     ligneMod = Connex.RequeteNoData(requete);
                     if (ligneMod == 0)
                     {
@@ -90,7 +90,7 @@ namespace MesBouquins
             return (opeOK, messErreur);
         }
 
-        public (bool, string) SupprimerClub(Livres UnLivre, int IdLivre)
+        public (bool, string) SupprimerLivre(Livres UnLivre, int IdLivre)
         {
             bool opeOK = false;
             int ligneMod = 0;
@@ -107,10 +107,9 @@ namespace MesBouquins
                 string bddMdp = Convert.ToString(ConnectionStrings["mdp"]);
 
                 Connex = new Dbconnect(bddServeur, bddPort, bddBase, bddIdent, bddMdp);
-                //Connex = new Dbconnect("secuoli.freeboxos.fr", 3306, "gestioncourses", "amoi", "");
                 if (Connex.OuvrirConnexion())
                 {
-                    string requete = "DELETE FROM club WHERE IdClub = " + IdClub;
+                    string requete = "DELETE FROM tbl_livre WHERE Id_Livre = " + IdLivre;
                     ligneMod = Connex.RequeteNoData(requete);
                     if (ligneMod == 0)
                     {
@@ -133,7 +132,7 @@ namespace MesBouquins
         }
 
 
-        public MySqlDataReader LecturetoutClub()
+        public MySqlDataReader LecturetoutLivre()
         {
             try
             {
@@ -146,10 +145,9 @@ namespace MesBouquins
                 string bddMdp = Convert.ToString(ConnectionStrings["mdp"]);
 
                 Connex = new Dbconnect(bddServeur, bddPort, bddBase, bddIdent, bddMdp);
-                //Connex = new Dbconnect("secuoli.freeboxos.fr", 3306, "gestioncourses", "amoi", "");
                 if (Connex.OuvrirConnexion())
                 {
-                    string requete = "SELECT * FROM club";
+                    string requete = "SELECT * FROM tbl_livre";
                     reader = Connex.RequeteSql(requete);
                     return reader;
                 }
