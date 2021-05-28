@@ -68,7 +68,7 @@ namespace MesBouquins
                 //Connex = new Dbconnect("secuoli.freeboxos.fr", 3306, "gestioncourses", "amoi", "");
                 if (Connex.OuvrirConnexion())
                 {
-                    string requete = "UPDATE club SET `Id_Reference`= '" + Unlivre.Id_Reference + "', `Livre_Numero`= '" + Unlivre.Livre_Numero + "', `Livre_Titre`= '" + Unlivre.Livre_Titre + "' WHERE Id_Livre = " + IdLivre + "";
+                    string requete = "UPDATE tbl_livre SET `Id_Reference`= '" + Unlivre.Id_Reference + "', `Livre_Numero`= '" + Unlivre.Livre_Numero + "', `Livre_Titre`= '" + Unlivre.Livre_Titre + "' WHERE Id_Livre = " + IdLivre + "";
                     ligneMod = Connex.RequeteNoData(requete);
                     if (ligneMod == 0)
                     {
