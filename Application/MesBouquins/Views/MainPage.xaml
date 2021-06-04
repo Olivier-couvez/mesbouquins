@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MesBouquins.Views"
         mc:Ignorable="d"
-        Title="Mes Bouquins" Height="450" Width="800">
+        Title="Mes Bouquins" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <TextBox Text="TextBox" TextWrapping="Wrap" Margin="38,24,513,386"/>
         <CheckBox Content="Titre" Margin="307,24,363,386" VerticalAlignment="Center"/>

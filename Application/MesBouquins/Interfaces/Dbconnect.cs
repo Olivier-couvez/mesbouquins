@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using MySql.Data.MySqlClient;
 
 
@@ -40,6 +41,8 @@ namespace MesBouquins
             try
             {
                 Connexion.Open();
+                MessageBox.Show("ServerVersion: " + Connexion.ServerVersion +
+"\nState: " + Connexion.State.ToString());
                 EstConnecte = true;
             }
             catch (Exception Er)
