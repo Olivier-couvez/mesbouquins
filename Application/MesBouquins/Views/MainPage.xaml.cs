@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MesBouquins.ViewModels;
 
 namespace MesBouquins.Views
 {
@@ -24,11 +25,7 @@ namespace MesBouquins.Views
         public Bouquins()
         {
             InitializeComponent();
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-
+            DataContext = new MainPageViewModel();
         }
 
         /*
