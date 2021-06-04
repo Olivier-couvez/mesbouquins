@@ -26,6 +26,11 @@ namespace MesBouquins.Views
             InitializeComponent();
         }
 
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         /*
         private void MajGrid()
         {
