@@ -14,7 +14,25 @@
         <ListView Margin="38,75,38,33">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+
+                    <GridViewColumn DisplayMemberBinding=
+                          "{Binding Path=Titre}" 
+                      Header="Titre" Width="170"/>
+                    <GridViewColumn DisplayMemberBinding=
+                          "{Binding Path=Auteur}" 
+                      Header="Auteur" Width="125"/>
+                    <GridViewColumn DisplayMemberBinding=
+                          "{Binding Path=Collection}" 
+                      Header="Collection" Width="125"/>
+                    <GridViewColumn DisplayMemberBinding=
+                          "{Binding Path=Edition}" 
+                      Header="Edition" Width="125"/>
+                    <GridViewColumn DisplayMemberBinding=
+                          "{Binding Path=Date}" 
+                      Header="Date" Width="80"/>
+                    <GridViewColumn DisplayMemberBinding=
+                          "{Binding Path=Numero}" 
+                      Header="Numéro" Width="80"/>
                 </GridView>
             </ListView.View>
         </ListView>

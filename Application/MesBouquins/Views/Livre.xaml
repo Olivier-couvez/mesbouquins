@@ -25,7 +25,10 @@
         <ListView Margin="213,239,32,75">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn DisplayMemberBinding=
+                          "{Binding Path=Auteur}" 
+                      Header="Auteur" Width="full" />
+                    
                 </GridView>
             </ListView.View>
         </ListView>
