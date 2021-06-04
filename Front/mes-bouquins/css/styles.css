@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
-  font-size: 0.625rem;  /*1rem = 10px */
+  font-size: 12px;
   color: black;
   background-color: white;
 }
@@ -11,12 +11,11 @@ html, body {
 h1, h2, h3, h4, h5{
   font-family: 'Bodoni Moda', serif;
 }
-
+header{
+  background-color: #086FA1;
+}
 
 /*************************************************/
-#container{
-  font-size: 2rem;
-}
 
 /*************************************************
 Menu
@@ -130,6 +129,37 @@ Menu
   transform: none;
 }
 /*FIN MENU BURGER*/
+
+
+ /****************************************************
+    **     Inscription  Connexion          **
+    ****************************************************/
+
+
+  .btnConnexion {
+    background-color: #FF5300;
+    Color:white;
+    padding: 10px 40px;
+    border-radius: 3px;
+    text-decoration: none;
+  }
+
+  .btnConnexion a{
+    Color:white;
+    text-decoration: none;
+  }
+
+  .btnConnexion a:hover{
+    Color:white;
+    text-decoration: none;
+  }
+
+
+  .parent {
+   float : right;
+    }
+    
+    
 
  /****************************************************
     **     Pour largeur > 768px                        **

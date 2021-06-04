@@ -12,6 +12,8 @@ M. Olivier Jaspart<br><br>
 Hébergement :<br>
 OVH<br>
 <br>
+
+https://www.fotomelia.com
 Loi « Informatique et Libertés »<br>
 Ce site internet utilise un formulaire de contact où des renseignements à caractère personnel sont requis. Ces informations sont stockées dans une base de données. GID s'interdit formellement de céder à quelque tiers le contenu de cette base.<br>
 Conformément à la loi Informatique et Libertés du 6 janvier 1978, le Client dispose d’un droit d’accès, de modifications, de rectification et de suppression des données nominatives le concernant, exerçable auprès du siège de GID à l’adresse suivante :<br>

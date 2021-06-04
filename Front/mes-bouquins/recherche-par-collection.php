@@ -3,7 +3,7 @@ session_start();
     $title = "Recherche par titre"?>
             
                 <article class="art-main">
-                    <h1>Recherche par collection</h1>
+                    <h1>Recherche par collections</h1>
                     <label for="site-searchCollection">Recherchez sur le site :</label>
 <input type="search" id="site-search" name="q"
        aria-label="Search through site content">

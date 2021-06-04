@@ -30,8 +30,8 @@
     <div class="container">
 
 
-        <header class="main-head">
-        <img src="images/logo.png" class="logo-banner" alt="Logo de la pisciculture du web">
+        <header>
+        <img src="images/logo-mes-bouquins.svg" class="logo-banner" alt="Logo de la pisciculture du web">
         <blockquote>Le meilleur caviar de truite des Hauts-de-France</blockquote>
         <select onChange="Aff();" name="Slast_name" class="Style49" id="Slast_name" onmouseout="this.size=0" style="background-color:#FFFFCC">
         <option> </option> 
@@ -52,7 +52,7 @@
             //Personne n'est authentifié 
             // affichage d'un lien pour se connecter
         ?>  
-        <a href="login.php" class="signin-link">Connexion</a>
+        <a href="Inscription.php" class="signin-link">Connexion</a>
         <?php
         }
         ?>
@@ -83,7 +83,7 @@
 
 
         
-        <section class="main-content">
+        <section>
 
                     <?php echo $contenu; ?>
         </section>

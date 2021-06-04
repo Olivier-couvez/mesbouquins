@@ -6,7 +6,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome",
-            "url": "http://localhost:80/mes-bouquins/${relativeFile}?XDEBUG_SESSION_START=vscode",
+            "url": "http://localhost:80/mesbouquins/${relativeFile}?XDEBUG_SESSION_START=vscode",
             "webRoot": "${workspaceFolder}"
         },
         {

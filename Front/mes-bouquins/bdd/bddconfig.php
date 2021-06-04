@@ -1,5 +1,5 @@
 <?php
 $bddserver = "localhost";
-$bddname = "bddtruites";
-$bddlogin = "bts";
-$bddpass = "snir";
+$bddname = "livre";
+$bddlogin = "root";
+$bddpass = "";
