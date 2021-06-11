@@ -33,8 +33,8 @@ class Database extends Config
 	public $default = [
 		'DSN'      => '',
 		'hostname' => 'localhost',
-		'username' => 'Uconteneur',
-		'password' => 'Pconteneur',
+		'username' => 'root',
+		'password' => '',
 		'database' => 'bddconteneurs',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
