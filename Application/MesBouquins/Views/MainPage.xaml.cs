@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MesBouquins.ViewModels;
 
 namespace MesBouquins.Views
 {
@@ -19,9 +21,45 @@ namespace MesBouquins.Views
     /// </summary>
     public partial class Bouquins : Window
     {
+        DbLivres BaseLivres;
         public Bouquins()
         {
             InitializeComponent();
+            DataContext = new MainPageViewModel();
         }
+
+        /*
+        private void MajGrid()
+        {
+
+            // lecture table complète de la base.
+            BaseLivres = new DbLivres();
+            MySqlDataReader reader = BaseLivres.LecturetoutLivre();
+
+            if (reader != null)          // on teste si la requete a bien retournéer un résultat
+            {
+
+                // Vérifie si des données sont présente dans reader
+
+                if (reader.HasRows)
+                {
+                    int i = 0;
+                    while (reader.Read())
+                    {
+                        // Ajout de la ligne au gridview.
+
+                        //DataGridViewCategories.Rows.Insert(i, Convert.ToInt16(reader.GetString(0)), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
+
+                        i++;
+                    }
+                }
+            }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            MajGrid();
+        }
+        */
     }
 }
