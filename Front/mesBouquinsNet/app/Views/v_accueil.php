@@ -32,7 +32,7 @@
 <?php
 
 // Paramètres
-
+//
 // $table: table dans laquelle effectuer la requête
 // $champs: champs dans lesquels la recherche est effectuées (si plusieurs
 // champs,
