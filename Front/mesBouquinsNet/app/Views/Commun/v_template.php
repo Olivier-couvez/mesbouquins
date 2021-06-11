@@ -9,6 +9,10 @@
         <!-- <meta name="robots" content="none"> -->
         <link rel="stylesheet" href="<?= base_url("css/conteneurs.css")?>">
         <title>Points de collecte du Relais</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
         <script>
             // 100vh chrome mobile
             // https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
@@ -51,13 +55,13 @@
             <nav class="main-nav">
                 <ul>
                     <li class="active"><a href="<?= base_url()?>">Accueil</a></li>
-                    <li><a href="http://conteneurs.local/public/forum">Forum</a></li>
+                    <li><a href="<?= base_url("/Forum")?>">Forum</a></li>
                     <li><a href="<?= base_url("Cconteneur/index")?>">Les conteneurs</a></li>
                 </ul>
             </nav>
             
         </header>
-        <div class="header-img" alt="Un tas de vêtements"></div>
+      
     </div>
     <div class="article-wrapper">
         
