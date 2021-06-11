@@ -5,11 +5,11 @@ html {
   --main-pink-color: rgb(226, 1, 107); */
   --main-text-color: #444444;
   --main-a-color: #0071bc;
-  --h1-text-color: rgb(226, 1, 107);
-  --h2-text-color: rgb(226, 1, 107);
-  --h3-text-color: rgb(226, 1, 107);
+  --h1-text-color: #FF6F00;
+  --h2-text-color: #FF6F00;
+  --h3-text-color: #FF6F00;
   --header-bg-color: white;
-  --header-logo-text-color: rgb(226, 1, 107);
+  --header-logo-text-color: #FF6F00;
   --header-text-color: rgb(0, 165, 171);
   --footer-bg-color: rgb(0, 165, 171);
   --footer-text-color: white;
@@ -17,7 +17,7 @@ html {
   --nav-bg-color: white;
   --nav-bg-active-color: white;
   --nav-text-color: rgb(0, 165, 171, 1);
-  --nav-text-hover-color: rgb(226, 1, 107);
+  --nav-text-hover-color: #FF4100;
   --nav-text-active-color: rgb(0, 165, 171, 1);
 
   --nav-toggle-bg-color: rgb(0, 165, 171, 1);
@@ -45,7 +45,9 @@ body {
   margin: 0;
   padding: 0;
 }
-
+h1, h2, h3, h4,h5{
+  font-family: 'Merriweather', serif;
+}
 /*********** Grille globale ******************/
 .page-wrapper {
   display: grid;
@@ -66,10 +68,13 @@ body {
   padding-left: 0rem;
   padding-right: 0rem;
   align-items: center;
+  background-color: #0082BA;
+ 
+
 }
 
 .main-header {
-  background-color: var(--header-bg-color);
+  background-color: #0082BA;
   /* pour placer le menu en absolu */
   position: relative;
   /* fixer la largeur maxi du contenu (1170p + 30px de marge = 1200px) */
@@ -95,8 +100,8 @@ body {
   margin-top: 1.5rem;
   margin-left: 1.5rem;
   margin-right: 0.5rem;
-  background: url("img/logoLeRelais.png");
-  background-size: 13rem 2.4rem;
+  background: url("img/logo-mes-bouquins.svg");
+  /* background-size: 13rem 2.4rem;*/
   background-repeat: no-repeat;
   background-position: top left;
 }

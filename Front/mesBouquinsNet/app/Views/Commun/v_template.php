@@ -51,7 +51,7 @@
             <nav class="main-nav">
                 <ul>
                     <li class="active"><a href="<?= base_url()?>">Accueil</a></li>
-                    <li><a href="http://conteneurs.local/public/forum">Forum</a></li>
+                    <li><a href="<?= base_url("/Forum")?>">Forum</a></li>
                     <li><a href="<?= base_url("Cconteneur/index")?>">Les conteneurs</a></li>
                 </ul>
             </nav>
