@@ -4,11 +4,11 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Points de collecte du Relais, fake content">
+        <meta name="description" content="Site de passionnés de la litérature populaire">
         <meta name="author" content="La team de devant">
         <!-- <meta name="robots" content="none"> -->
         <link rel="stylesheet" href="<?= base_url("css/conteneurs.css")?>">
-        <title>Points de collecte du Relais</title>
+        <title>mes-bouquins.net</title>
         <script>
             // 100vh chrome mobile
             // https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
@@ -38,7 +38,7 @@
 <div class="page-wrapper">
     <div class="header-wrapper">
         <header class="main-header">
-            <a class="header-logo" href="<?= base_url("Cconteneur/index")?>">Points de collecte</a>
+            <a class="header-logo" href="<?= base_url("Cconteneur/index")?>">mes-bouquins.net</a>
             <label for="nav-toggle">
                 <span class="nav-toogle-text">Afficher / Cacher le menu</span>
                 <div class="nav-toggle-button">

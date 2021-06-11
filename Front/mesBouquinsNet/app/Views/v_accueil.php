@@ -2,12 +2,10 @@
     <h1>
     <?= $page_titre1; ?>
     </h1>
-    <img src="<?= base_url("images/Relais-conteneur-2.jpg")?>" alt="">
+    <img src="<?= base_url("images/tas-de-livres.jpg")?>" alt="Une personne vide un conteneur">
+    <h2>Une petite présentation du site...</h2>
     <p>
-        <strong>Si vous déposez régulièrement vos vieux vêtements dans les bornes "Le Relais"
-        des compagnons d'Emmaüs, il vous est peut-être déjà arrivé, comme moi, de
-        tomber sur une borne pleine, dans laquelle il n'était plus possible de
-        déposer quoi que ce soit...</strong>
+        <strong>Pourquoi mes-bouquins.net</strong>
     </p>
     <p> Pour éviter cette situation, une scop, membre
         d'Emmaüs, a décidé de lancer un projet pilote de Relais connecté. Située
@@ -15,42 +13,127 @@
         de réinsertion sociale qui, tout comme les autres scop de l'union des Relais,
         est centrée sur la collecte, le tri, et la revalorisation des vieux textiles.
     </p>
-    <p>
-        Jusqu'ici, la scop utilisait un logiciel maison d'optimisation des tournées.
-        Il fonctionne sur la base d'indicateurs de fréquence moyenne de remplissage
-        calculés à partir de données saisies par les salariés lors de leurs tournées
-        de collecte, via PDA. "Nous testons actuellement des capteurs connectés qui
-        nous permettrait de suivre le niveau de remplissage de nos bornes en temps
-        réel", confirme Jean-François Luthun, PDG d'EBS Le Relais Val de Seine. En
-        ligne de mire : disposer d'un outil permettant de faire face à tout
-        impondérable pouvant engendrer une saturation de la borne (une braderie,
-        un vide grenier, un déménagement à proximité...).
-    </p>
+    <h2>Recherche par mot clé ...</h2>    
+    
+    <!-- Titre : Moteur de recherche Multi Fonctions - MySQLi                                                         
+    URL   : https://phpsources.net/code_s.php?id=169
+    Auteur           : R@f                                                                                                
+    Date édition     : 10 Mai 2006                                                                                        
+    Date mise à jour : 18 Sept 2019                                                                                      
+    Rapport de la maj: - refactoring du code en PHP 7 - fonctionnement du code vérifié                                                                                     -->
 
-    <h2>Que deviennent vos dons ?</h2>
-    <img src="<?= base_url("images/ramassage.jpg")?>" alt="Une personne vide un conteneur">
+    <form style="text-align:center;" action="" method="post">
+    <input type="radio" name="option" value="all" checked>Recherche tous les mots<br>
+    <input type="radio" name="option" value="one">Rechercher un de ces mots<br>
+    <input type="radio" name="option" value="sentence">Rechercher l'expression exacte<br>
+    <input type="text" name="search" size="60"><br><br>
+    <input type="submit" value="Rechercher" style="position:relative">
+    </form>
 
-    <h3>Une valorisation de vos vêtements à 97%.</h3>
-    <p>Grâce à vos dons, le Relais récupère chaque semaine plus de 1 800 tonnes de textiles,
-        ce qui représente 55 % de la collecte en France. Ces textiles sont acheminés vers
-        14 centres de tri, pour connaître différents sorts selon leur état et leur qualité :
-    </p>
-    <p>Les textiles utilisables en l’état sont revendus à bas prix dans les 73 boutiques Ding
-        Fring du Relais ou destinés à l’export.</p>
-    <p>Les textiles qui ne peuvent plus être portés sont recyclés par le Relais dans le
-        cadre de la production de chiffons d’essuyage pour l’industrie, ou pour la fabrication
-        de matières à partir desquelles est notamment fabriqué l’isolant Métisse®.</p>
-    <p>La matière non valorisée représente 3 % des volumes collectés, dont la majeure
-        partie sera utilisée en valorisation énergétique.</p>
+<?php
 
-    <img src="<?= base_url("images/recyclage.jpg")?>" alt="Des personnes trient les vêtements">
+// Paramètres
+
+// $table: table dans laquelle effectuer la requête
+// $champs: champs dans lesquels la recherche est effectuées (si plusieurs
+// champs,
+//          $champs est un tableau)
+// $select: champs à récupérer
+// $order: champ de classement
+// $sens: ASC ou DESC
+// $limit_start: départ
+// $limit_nb: nombre d'enregistrements sélectionnés
+// $count: paramètre optionnel: Si est vide ou non-passé, la requête
+// est crée normalement. Sinon, il désigne le champ pour créer la requête
+// count()
+ $table = 'conteneur';
+ $champs = '*';	
+
+    //début Fonction de recherche
+    function requete($table,$champs,$select,$order,$sens,$limit_start,$limit_nb,
+    $count='')
+    {
+    // option de recherche
+    $option = $_POST['option'];
+    // texte de recherche
+    $search = $_POST['search'];
+       
+    // si c'est le premier appel de la fonction
+    if(!isset($fonction_requete))
+    {
+      static $fonction_requete = 1;
+      
+      // si "Rechercher tous les mots" ou "Rechercher un de ces mots"
+      if($option == 'all' || $option == 'one')
+      {
+         // liste des mots
+         $mots = explode(' ', $search);
+         
+         // sépararateur
+         if($option == 'all')
+            $sep = ' AND ';
+         else
+            $sep = ' OR ';
+      } // if($option == 'all' || $option == 'one')
+      // "Rechercher l'expression exacte"
+      else
+      {
+         $mots = $search;
+         $sep = '';
+      }
+   } // if(!isset($fonction_requete))
+   
+   if(!is_array($champs))
+      $champs = array($champs);
+   
+   if($option == 'all' || $option == 'one')
+   {
+      // pour savoir si on en est à la première itération ou non
+      $i = 0;
+      
+      // pour tous les mots
+      foreach($mots as $mot)
+      {
+         if(!$i)
+         {
+            $search = '~#^!|!^#~ LIKE \'%' . $mot . '%\'';
+            $i = 1;
+         }
+         else
+            $search .= $sep . '~#^!|!^#~ LIKE \'%' . $mot . '%\'';
+      } // foreach($mots as $mot)
+   } // if($option == 'all' || $option == 'one')
+   else if($option == 'sentence')
+      $search = '~#^!|!^#~ LIKE \'%' . $mots . '%\'';
+      
+   $i = 0;
+   
+   // début de requête
+   if(empty($count))
+      $req_search = 'SELECT ' . $select . ' FROM ' . $table . ' WHERE ';
+   else
+      $req_search = 'SELECT count(' . $count . ') FROM ' . $table . ' WHERE ';
+   
+   // ajout des champs
+   foreach($champs as $champ)
+   {
+      if(!$i)
+      {
+         $req_search .= '( ' . str_replace('~#^!|!^#~', $champ, $search) .' ) ';
+         $i = 1;
+      }
+      else
+         $req_search .= 'OR ( ' . str_replace('~#^!|!^#~', $champ, $search) .
+' ) ';
+   }
+   
+   if(empty($count))
+      $req_search .= "ORDER BY $order $sens LIMIT $limit_start, $limit_nb";
+   
+   return $req_search;
+   } 
+   ?>
 
 
-    <h3>Au Relais, chaque centime généré est réinvesti à des fins de lutte contre l’exclusion.</h3>
-    <p>En développant l’activité textile et en prenant en charge toute la filière – la collecte,
-        le tri, la valorisation –, le Relais crée des emplois durables pour des personnes
-        en difficulté. En 30 ans, plus de 2 200 emplois ont ainsi été créés. Dans le même
-        temps, le Relais est devenu leader de la filière en France, démontrant que
-        professionnalisme et solidarité sont parfaitement compatible.
-    </p>
+    
 </article>

@@ -7,8 +7,8 @@ class Caccueil extends Controller
 {
 	public function index()
 	{
-		$data['page_title']="Le Relais";
-		$data['page_titre1']="Un projet pilote de borne connectée";
+		$data['page_title']="Accueil du site";
+		$data['page_titre1']="mes-bouquins.net : Site pour passionés de la littérature populaire";
 		$page['contenu'] = view('v_accueil', $data);
 		return view('Commun/v_template', $page);
 	}

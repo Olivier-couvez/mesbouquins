@@ -16,7 +16,7 @@
         </ul>
    <?php
     } else {
-        echo "<p>Aucun réultat trouvé</p>";
+        echo "<p>Aucun résultat trouvé</p>";
     }
     ?>
     <?php echo $pager->links(); ?>
