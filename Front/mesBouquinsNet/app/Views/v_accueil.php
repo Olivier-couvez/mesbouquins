@@ -2,12 +2,11 @@
     <h1>
     <?= $page_titre1; ?>
     </h1>
-    <img src="<?= base_url("images/tas-de-livres.jpg")?>" alt="Une personne vide un conteneur">
+    <img src="<?= base_url("images/tas-de-livres.jpg")?>" alt="Une personne vide un conteneur"/>
     <h2>Une petite présentation du site...</h2>
     <p>
-        <strong>Pourquoi mes-bouquins.net</strong>
-    </p>
-    <p> Pour éviter cette situation, une scop, membre
+        <strong>Pourquoi mes-bouquins.net ...</strong><br>
+        Pour éviter cette situation, une scop, membre
         d'Emmaüs, a décidé de lancer un projet pilote de Relais connecté. Située
         à Chanteloup-les-Vignes, EBS Le Relais Val de Seine développe une activité
         de réinsertion sociale qui, tout comme les autres scop de l'union des Relais,
@@ -27,7 +26,7 @@
     <input type="radio" name="option" value="one">Rechercher un de ces mots<br>
     <input type="radio" name="option" value="sentence">Rechercher l'expression exacte<br>
     <input type="text" name="search" size="60"><br><br>
-    <input type="submit" value="Rechercher" style="position:relative">
+    <input type="submit" value="Rechercher" style="position:relative" onclick="lancerRechercheMotCle();">
     </form>
 
 <?php
@@ -132,8 +131,7 @@
    
    return $req_search;
    } 
-   ?>
 
-
+?>
     
 </article>
