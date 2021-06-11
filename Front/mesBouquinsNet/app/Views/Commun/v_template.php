@@ -51,13 +51,13 @@
             <nav class="main-nav">
                 <ul>
                     <li class="active"><a href="<?= base_url()?>">Accueil</a></li>
-                    <li><a href="#">Les tournées de collecte</a></li>
+                    <li><a href="<?= base_url("/Forum")?>">Forum</a></li>
                     <li><a href="<?= base_url("Cconteneur/index")?>">Les conteneurs</a></li>
                 </ul>
             </nav>
             
         </header>
-        <div class="header-img" alt="Un tas de vêtements"></div>
+      
     </div>
     <div class="article-wrapper">
         

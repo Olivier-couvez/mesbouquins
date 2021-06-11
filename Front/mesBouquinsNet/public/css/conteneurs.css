@@ -5,22 +5,22 @@ html {
   --main-pink-color: rgb(226, 1, 107); */
   --main-text-color: #444444;
   --main-a-color: #0071bc;
-  --h1-text-color: rgb(226, 1, 107);
-  --h2-text-color: rgb(226, 1, 107);
-  --h3-text-color: rgb(226, 1, 107);
+  --h1-text-color: rgb(247, 120, 12);
+  --h2-text-color: rgb(247, 120, 12);
+  --h3-text-color: rgb(247, 120, 12);
   --header-bg-color: white;
-  --header-logo-text-color: rgb(226, 1, 107);
-  --header-text-color: rgb(0, 165, 171);
-  --footer-bg-color: rgb(0, 165, 171);
+  --header-logo-text-color: rgb(247, 120, 12);
+  --header-text-color: #0071bc;
+  --footer-bg-color: #0071bc;
   --footer-text-color: white;
 
   --nav-bg-color: white;
   --nav-bg-active-color: white;
-  --nav-text-color: rgb(0, 165, 171, 1);
-  --nav-text-hover-color: rgb(226, 1, 107);
-  --nav-text-active-color: rgb(0, 165, 171, 1);
+  --nav-text-color: #0071bc;
+  --nav-text-hover-color: rgb(247, 120, 12);
+  --nav-text-active-color: #0071bc;
 
-  --nav-toggle-bg-color: rgb(0, 165, 171, 1);
+  --nav-toggle-bg-color: #0071bc;
   --nav-toggle-bg-active-color: var(--nav-toggle-bg-color);
   --nav-toggle-text-color: white;
   --nav-toggle-text-hover-color: var(--nav-toggle-text-color);
@@ -45,7 +45,9 @@ body {
   margin: 0;
   padding: 0;
 }
-
+h1, h2, h3, h4, h5{
+  font-family: 'Merriweather', serif;
+}
 /*********** Grille globale ******************/
 .page-wrapper {
   display: grid;
@@ -66,10 +68,13 @@ body {
   padding-left: 0rem;
   padding-right: 0rem;
   align-items: center;
+  background-color: #0082BA;
+  height: auto; 
+
 }
 
 .main-header {
-  background-color: var(--header-bg-color);
+  background-color: #0082BA;
   /* pour placer le menu en absolu */
   position: relative;
   /* fixer la largeur maxi du contenu (1170p + 30px de marge = 1200px) */
@@ -87,6 +92,7 @@ body {
   height: fit-content;
   color: var(--header-logo-text-color);
   text-decoration: none;
+  min-height: 100px;
   padding-bottom: 1.5rem;
   padding-left: 14rem;
   padding-top: 0.4rem;
@@ -95,8 +101,8 @@ body {
   margin-top: 1.5rem;
   margin-left: 1.5rem;
   margin-right: 0.5rem;
-  background: url("img/logoLeRelais.png");
-  background-size: 13rem 2.4rem;
+  background: url("img/logo-mes-bouquins.svg");
+  /* background-size: 13rem 2.4rem;*/
   background-repeat: no-repeat;
   background-position: top left;
 }
@@ -201,7 +207,7 @@ body {
   /*center l'article dans le viewport horizontal*/
   display: flex;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 1.5rem 6em;
 }
 
 .main-article {
@@ -251,7 +257,8 @@ body {
   font-size: 1.87rem;
   color: var(--h2-text-color);
   font-weight: 600;
-  text-align: start;
+  text-align: center;
+  display: inline-block;
 }
 
 .main-article h3 {
