@@ -9,6 +9,11 @@ namespace MesBouquins.ViewModels
 {
     class MainPageViewModel: INotifyPropertyChanged
     {
+
+        string titre;
+        string auteur;
+        string collection;
+        string edition;
         
 
         public MainPageViewModel()
@@ -16,6 +21,8 @@ namespace MesBouquins.ViewModels
             DbLivres dbLivre = new DbLivres();
 
             dbLivre.LecturetoutLivre();
+
+            
         }
 
 

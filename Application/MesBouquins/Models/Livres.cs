@@ -54,6 +54,7 @@ namespace MesBouquins.Models
         private Boolean livre_Fiche_OK;
         private string numero_notice;
         private Int16 livre_Num_Tri;
+        private DateTime livre_Date_Parution;
 
 
         public Int16 Id_Livre { get => id_Livre; set => id_Livre = value; }
@@ -102,5 +103,6 @@ namespace MesBouquins.Models
         public bool Livre_Fiche_OK { get => livre_Fiche_OK; set => livre_Fiche_OK = value; }
         public string Numero_notice { get => numero_notice; set => numero_notice = value; }
         public Int16 Livre_Num_Tri { get => livre_Num_Tri; set => livre_Num_Tri = value; }
+        public DateTime Livre_Date_Parution { get => livre_Date_Parution; set => livre_Date_Parution = value; }
     }
 }
