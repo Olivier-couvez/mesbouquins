@@ -32,7 +32,7 @@
 
         </Grid.RowDefinitions>
         <TextBlock Text="{Binding Path=Titre, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="1" Margin="0,0,0,10" TextWrapping="Wrap"  VerticalAlignment="Top" Height="29" FontSize="20" Background="#FFC2DBF3"></TextBlock>
-        <TextBlock Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="2" TextWrapping="Wrap"  VerticalAlignment="Top" Height="21" Foreground="Black" Background="#FFC2DBF3"><Run Language="fr-fr" Text="Titre original"/></TextBlock>
+        <TextBlock Text="{Binding Path=TitreOri, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="2" TextWrapping="Wrap"  VerticalAlignment="Top" Height="21" Foreground="Black" Background="#FFC2DBF3"><Run Language="fr-fr" Text="Titre original"/></TextBlock>
         <ComboBox Grid.Column="5"  Grid.Row="2" Height="20" VerticalAlignment="Top" >
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
