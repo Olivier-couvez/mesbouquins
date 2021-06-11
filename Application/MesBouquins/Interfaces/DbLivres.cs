@@ -158,6 +158,33 @@ namespace MesBouquins
             Connex.FermerConnexion();
             return reader;
         }
+
+        public MySqlDataReader LectureUnLivre(int Id)
+        {
+            try
+            {
+                var ConnectionStrings = ConfigurationManager.ConnectionStrings;
+                string bddServeur = Convert.ToString(ConnectionStrings["serveur"]);
+                string sBddPort = Convert.ToString(ConnectionStrings["port"]);
+                int bddPort = Convert.ToInt16(sBddPort);
+                string bddBase = Convert.ToString(ConnectionStrings["base"]);
+                string bddIdent = Convert.ToString(ConnectionStrings["identificateur"]);
+                string bddMdp = Convert.ToString(ConnectionStrings["mdp"]);
+
+                Connex = new Dbconnect(bddServeur, bddPort, bddBase, bddIdent, bddMdp);
+                if (Connex.OuvrirConnexion())
+                {
+                    string requete = "SELECT * FROM tbl_livre WHERE Id_Livre = "+Id;
+                    return Connex.RequeteSql(requete);
+                }
+            }
+            catch (Exception e)
+            {
+                return reader;
+            }
+            Connex.FermerConnexion();
+            return reader;
+        }
     }
 }
 

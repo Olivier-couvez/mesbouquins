@@ -24,6 +24,7 @@ namespace MesBouquins.Views
     {
   
         DbLivres BaseLivres;
+        int IdLivre;
         public Bouquins()
         {
             InitializeComponent();
@@ -32,10 +33,10 @@ namespace MesBouquins.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Livre livre = new Livre();
+            IdLivre = 1500;
+            Livre livre = new Livre(IdLivre);
             var result = livre.ShowDialog();
-            livre.Close();
-            
+            livre.Close();          
         }
 
         /*

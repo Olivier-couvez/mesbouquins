@@ -21,11 +21,11 @@ namespace MesBouquins.Views
     /// </summary>
     public partial class Livre : Window
     {
-        public Livre()
+        public Livre(int IDLivre)
         {
             InitializeComponent();
-            DataContext = new LivreViewModel();
-            LivreViewModel vm = new LivreViewModel();
+            DataContext = new LivreViewModel(IDLivre);
+            LivreViewModel vm = new LivreViewModel(IDLivre);
             this.DataContext = vm;
             if (vm.CloseAction == null)
                 vm.CloseAction = new Action(this.Close);
