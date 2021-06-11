@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MesBouquins.Models
 {
-    class Edition
+    public class Edition
     {
         private Int16 id_Edition;
         private string Edition_Nom;

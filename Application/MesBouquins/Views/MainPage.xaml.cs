@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MesBouquins.ViewModels;
+using MesBouquins.Models;
 
 namespace MesBouquins.Views
 {
@@ -21,11 +22,20 @@ namespace MesBouquins.Views
     /// </summary>
     public partial class Bouquins : Window
     {
+  
         DbLivres BaseLivres;
         public Bouquins()
         {
             InitializeComponent();
             DataContext = new MainPageViewModel();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Livre livre = new Livre();
+            var result = livre.ShowDialog();
+            livre.Close();
+            
         }
 
         /*

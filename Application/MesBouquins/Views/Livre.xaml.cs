@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MesBouquins.Models;
+using MesBouquins.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,8 +24,11 @@ namespace MesBouquins.Views
         public Livre()
         {
             InitializeComponent();
+            DataContext = new LivreViewModel();
+            LivreViewModel vm = new LivreViewModel();
+            this.DataContext = vm;
+            if (vm.CloseAction == null)
+                vm.CloseAction = new Action(this.Close);
         }
-
-        
     }
 }
