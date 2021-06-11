@@ -6,7 +6,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome",
-            "url": "http://conteneur.local/index.php?XDEBUG_SESSION_START=vscode",
+            "url": "http://conteneurs.local/public/index.php?XDEBUG_SESSION_START=vscode",
             "webRoot": "${workspaceFolder}"
         },
         {
