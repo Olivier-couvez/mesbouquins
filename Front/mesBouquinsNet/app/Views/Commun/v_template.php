@@ -61,7 +61,7 @@
             </nav>
             
         </header>
-        <div class="header-img" alt="Un tas de vêtements"></div>
+      
     </div>
     <div class="article-wrapper">
         
