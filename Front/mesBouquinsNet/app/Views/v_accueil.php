@@ -1,6 +1,6 @@
 <article class="main-article">
     <h1>
-    <?= $page_titre1; ?>
+    <?= $heading; ?>
     </h1>
     <img src="<?= base_url("images/tas-de-livres.jpg")?>" alt="Une personne vide un conteneur">
     <h2>Une petite présentation du site...</h2>
