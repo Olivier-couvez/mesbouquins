@@ -148,11 +148,10 @@ namespace MesBouquins
                 if (Connex.OuvrirConnexion())
                 {
                     string requete = "SELECT * FROM tbl_livre";
-                    reader = Connex.RequeteSql(requete);
-                    return reader;
+                    return Connex.RequeteSql(requete);
                 }
             }
-            catch
+            catch(Exception e)
             {
                 return reader;
             }

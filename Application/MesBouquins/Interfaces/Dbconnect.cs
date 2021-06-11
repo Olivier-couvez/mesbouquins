@@ -41,8 +41,6 @@ namespace MesBouquins
             try
             {
                 Connexion.Open();
-                MessageBox.Show("ServerVersion: " + Connexion.ServerVersion +
-"\nState: " + Connexion.State.ToString());
                 EstConnecte = true;
             }
             catch (Exception Er)
