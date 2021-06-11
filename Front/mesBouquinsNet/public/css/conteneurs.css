@@ -5,26 +5,26 @@ html {
   --main-pink-color: rgb(226, 1, 107); */
   --main-text-color: #444444;
   --main-a-color: #0071bc;
-  --h1-text-color: rgb(247, 120, 12);
-  --h2-text-color: rgb(247, 120, 12);
-  --h3-text-color: rgb(247, 120, 12);
+  --h1-text-color: #FF6F00;
+  --h2-text-color: #FF6F00;
+  --h3-text-color: #FF6F00;
   --header-bg-color: white;
-  --header-logo-text-color: rgb(247, 120, 12);
+  --header-logo-text-color: #FF6F00;
   --header-text-color: rgb(0, 165, 171);
-  --footer-bg-color: rgb(0, 165, 171);
+  --footer-bg-color: #303030;
   --footer-text-color: white;
 
-  --nav-bg-color: white;
-  --nav-bg-active-color: white;
-  --nav-text-color: rgb(0, 165, 171, 1);
-  --nav-text-hover-color: rgb(247, 120, 12);
+  --nav-bg-color: #0082BA;
+  --nav-bg-active-color: #FFF;
+  --nav-text-color: #FFF;
+  --nav-text-hover-color: #FF6F00;
   --nav-text-active-color: rgb(0, 165, 171, 1);
 
-  --nav-toggle-bg-color: rgb(0, 165, 171, 1);
+  --nav-toggle-bg-color: #cecece;
   --nav-toggle-bg-active-color: var(--nav-toggle-bg-color);
-  --nav-toggle-text-color: white;
-  --nav-toggle-text-hover-color: var(--nav-toggle-text-color);
-  --nav-toggle-text-active-color: var(--nav-toggle-text-color);
+  --nav-toggle-text-color: #0071bc;
+  --nav-toggle-text-hover-color: #FF6F00;
+  --nav-toggle-text-active-color: #FF4100;
 
   --gallery-item-border-color: #dedede;
 }
@@ -69,7 +69,6 @@ h1, h2, h3, h4,h5{
   padding-right: 0rem;
   align-items: center;
   background-color: #0082BA;
-  height: auto;
  
 
 }
@@ -88,10 +87,11 @@ h1, h2, h3, h4,h5{
 /*********** Logo ******************/
 .header-logo {
   display: inline-block;
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 3rem;
+  line-height: 10rem;
   height: fit-content;
-  color: var(--header-logo-text-color);
+  color: #FFF;
+  font-family: 'Merriweather', serif;
   text-decoration: none;
   padding-bottom: 1.5rem;
   padding-left: 14rem;
@@ -356,7 +356,7 @@ h1, h2, h3, h4,h5{
   background-color: var(--footer-bg-color);
   /* fixer la largeur maxi du contenu (1170p + 30px de marge = 1200px) */
   width: 100%;
-  max-width: 1170px;
+ 
   padding: 1.5rem;
 }
 

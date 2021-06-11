@@ -11,9 +11,10 @@ class Cconteneur extends Controller
 	{
 		$model = new Mconteneur();
 		$data['result'] = $model->getAll();
-		$data['page_title']="Les Conteneurs";
-		$data['page_titre1']="Liste des conteneurs :";
 		$data['pager'] = $model->pager;
+        $data['heading'] ="Page détaillée ";
+        $page['titrePage']="Page détaillée ";
+		$page['meta']="Page détaillée";
 		$page['contenu'] = view('Conteneurs/v_liste_conteneurs', $data);
 		return view('Commun/v_template', $page);
 	}

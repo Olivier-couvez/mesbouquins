@@ -4,11 +4,11 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Site de passionnés de la litérature populaire">
-        <meta name="author" content="La team de devant">
+        <meta name="description" content="">
+        <meta name="author" content="<?= $meta; ?>">
         <!-- <meta name="robots" content="none"> -->
         <link rel="stylesheet" href="<?= base_url("css/conteneurs.css")?>">
-        <title>mes-bouquins.net</title>
+        <title><?= $titrePage; ?></title>
         <script>
             // 100vh chrome mobile
             // https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
@@ -38,7 +38,7 @@
 <div class="page-wrapper">
     <div class="header-wrapper">
         <header class="main-header">
-            <a class="header-logo" href="<?= base_url("Cconteneur/index")?>">mes-bouquins.net</a>
+            <a class="header-logo" href="<?= base_url("Caccueil/index")?>">Mes Bouquins.net</a>
             <label for="nav-toggle">
                 <span class="nav-toogle-text">Afficher / Cacher le menu</span>
                 <div class="nav-toggle-button">
@@ -50,7 +50,7 @@
             <input type="checkbox" id="nav-toggle">
             <nav class="main-nav">
                 <ul>
-                    <li class="active"><a href="<?= base_url()?>">Accueil</a></li>
+                    <li class="active"><a href="<?= base_url("Caccueil/index")?>">Accueil</a></li>
                     <li><a href="<?= base_url("/Forum")?>">Forum</a></li>
                     <li><a href="<?= base_url("Cconteneur/index")?>">Les conteneurs</a></li>
                 </ul>
@@ -69,10 +69,8 @@
     <div class="footer-wrapper">
         <footer class="main-footer">
             <ul class="footer-links">
-                <li><a href="#">&copy; Fake</a></li>
-                <li><a href="#">Recrutement</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">&copy; Mes-bouquins.net</a></li>
+                <li><a href="<?= base_url("Cmentions/index")?>">Mentions légales</a></li>
             </ul>
         </footer>
     </div>
