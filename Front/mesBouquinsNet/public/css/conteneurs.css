@@ -5,11 +5,11 @@ html {
   --main-pink-color: rgb(226, 1, 107); */
   --main-text-color: #444444;
   --main-a-color: #0071bc;
-  --h1-text-color: rgb(226, 1, 107);
-  --h2-text-color: rgb(226, 1, 107);
-  --h3-text-color: rgb(226, 1, 107);
+  --h1-text-color: rgb(247, 120, 12);
+  --h2-text-color: rgb(247, 120, 12);
+  --h3-text-color: rgb(247, 120, 12);
   --header-bg-color: white;
-  --header-logo-text-color: rgb(226, 1, 107);
+  --header-logo-text-color: rgb(247, 120, 12);
   --header-text-color: rgb(0, 165, 171);
   --footer-bg-color: rgb(0, 165, 171);
   --footer-text-color: white;
@@ -17,7 +17,7 @@ html {
   --nav-bg-color: white;
   --nav-bg-active-color: white;
   --nav-text-color: rgb(0, 165, 171, 1);
-  --nav-text-hover-color: rgb(226, 1, 107);
+  --nav-text-hover-color: rgb(247, 120, 12);
   --nav-text-active-color: rgb(0, 165, 171, 1);
 
   --nav-toggle-bg-color: rgb(0, 165, 171, 1);
