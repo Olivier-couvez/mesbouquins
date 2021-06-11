@@ -41,20 +41,17 @@ namespace MesBouquins.ViewModels
             DbLivres dbLivre = new DbLivres();
             var reader = dbLivre.LecturetoutLivre();
 
-
             while (await reader.ReadAsync())
             {
-
-                
-
                 ListLivres.Add(new Livres()
                 {
                     Id_Livre = reader.GetFieldValue<int>(reader.GetOrdinal("Id_Livre")),
                     Id_Reference = reader.GetFieldValue<int>(reader.GetOrdinal("id_Reference")),
-                    //Livre_Numero = reader.GetFieldValue<string>(reader.GetOrdinal("Livre_Numero")),
-                    //Livre_Titre = reader.GetFieldValue<string>(reader.GetOrdinal("Livre_Titre")),
-                    //Livre_Sous_Titre = reader.GetFieldValue<string>(reader.GetOrdinal("Livre_Sous_Titre")),
-            });
+
+                    Livre_Numero =  !reader.IsDBNull(reader.GetOrdinal("Livre_Numero")) ? reader.GetFieldValue<string>(reader.GetOrdinal("Livre_Numero")) : string.Empty,
+                    Livre_Titre = !reader.IsDBNull(reader.GetOrdinal("Livre_Titre")) ?  reader.GetFieldValue<string>(reader.GetOrdinal("Livre_Titre")) : string.Empty,
+                    Livre_Sous_Titre = !reader.IsDBNull(reader.GetOrdinal("Livre_Sous_Titre")) ?  reader.GetFieldValue<string>(reader.GetOrdinal("Livre_Sous_Titre")) : string.Empty,
+                });
                 
             };
         }
