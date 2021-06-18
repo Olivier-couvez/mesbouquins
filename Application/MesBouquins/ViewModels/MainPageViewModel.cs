@@ -37,12 +37,17 @@ namespace MesBouquins.ViewModels
         }
 
 
-        private async void InitialiseListLivre()
+        private void InitialiseListLivre()
         {
 
             Livres livres = new Livres();
             List<Livres> ListLivres = new List<Livres>();
             DbLivres dbLivre = new DbLivres();
+
+            List<string> titreLivre = new List<string>();
+            List<string> numeroLivre = new List<string>();
+            List<DateTime> dateLivre = new List<DateTime>();
+
             var reader = dbLivre.Lecture("SELECT COUNT(*) FROM tbl_livre");
 
 
@@ -50,38 +55,78 @@ namespace MesBouquins.ViewModels
 
             int NbEnregistrement = reader.GetInt32(0);
 
-            reader = dbLivre.Lecture("SELECT Livre_Titre FROM `tbl_livre`");
+            ////Livre_Titre
+            //reader = dbLivre.Lecture("SELECT Livre_Titre FROM `tbl_livre`");
 
+            //reader.Read();
             
+            //while(reader.HasRows)
+            //{
+            //    if(!reader.IsDBNull(0) == false)
+            //        titreLivre.Add(reader.GetString(0));
+            //    else
+            //        titreLivre.Add("");
+            //    reader.Read();
+            //}
 
-            reader.Read();
+            ////Livre_Numero
+            //reader = dbLivre.Lecture("SELECT Livre_Numero FROM `tbl_livre`");
 
-            string test = reader.GetString(0);
+            //reader.Read();
+
+            //while (reader.HasRows)
+            //{
+            //    numeroLivre.Add(reader.GetString(0));
+            //    reader.Read();
+            //}
+
+            ////Livre_Date
+            //reader = dbLivre.Lecture("SELECT `Livre_Parution` FROM `tbl_livre`");
+
+            //reader.Read();
+
+            //while (reader.HasRows)
+            //{
+            //    dateLivre.Add(reader.GetDateTime(0));
+            //    reader.Read();
+            //}
 
 
 
 
 
 
-
-
-
-            ////while (await reader.ReadAsync())
-            ////{
-            ////    ListLivres.Add(new Livres()
-            ////    {
-            ////        Livre_Titre = !reader.IsDBNull(reader.GetOrdinal("Livre_Titre")) ? reader.GetFieldValue<string>(reader.GetOrdinal("Livre_Titre")) : string.Empty,
-            ////        Livre_Numero = !reader.IsDBNull(reader.GetOrdinal("Livre_Numero")) ? reader.GetFieldValue<string>(reader.GetOrdinal("Livre_Numero")) : string.Empty,
-            ////        //auteur
-            ////        //Id_Reference = reader.GetFieldValue<int>(reader.GetOrdinal("id_Reference")),
-
-            ////        //Livre_Numero =  !reader.IsDBNull(reader.GetOrdinal("Livre_Numero")) ? reader.GetFieldValue<string>(reader.GetOrdinal("Livre_Numero")) : string.Empty,
-
-            ////        //Livre_Sous_Titre = !reader.IsDBNull(reader.GetOrdinal("Livre_Sous_Titre")) ?  reader.GetFieldValue<string>(reader.GetOrdinal("Livre_Sous_Titre")) : string.Empty,
-            ////    });
-                
-            //};
+            //? Link pour recherche
+            //? List<Livres> l = new List<Livres>();
+            //? l.Where(x => x.Livre_Titre == "livre");
         }
+
+
+
+
+
+
+
+
+
+
+
+
+        //while (await reader.ReadAsync())
+        //{
+        //    ListLivres.Add(new Livres()
+        //    {
+        //        Livre_Titre = !reader.IsDBNull(reader.GetOrdinal("Livre_Titre")) ? reader.GetFieldValue<string>(reader.GetOrdinal("Livre_Titre")) : string.Empty,
+        //        Livre_Numero = !reader.IsDBNull(reader.GetOrdinal("Livre_Numero")) ? reader.GetFieldValue<string>(reader.GetOrdinal("Livre_Numero")) : string.Empty,
+        //        //auteur
+
+        //        //Livre_Numero =  !reader.IsDBNull(reader.GetOrdinal("Livre_Numero")) ? reader.GetFieldValue<string>(reader.GetOrdinal("Livre_Numero")) : string.Empty,
+
+        //        //Livre_Sous_Titre = !reader.IsDBNull(reader.GetOrdinal("Livre_Sous_Titre")) ?  reader.GetFieldValue<string>(reader.GetOrdinal("Livre_Sous_Titre")) : string.Empty,
+        //    });
+
+        //};
+
 
         private static PropertyInfo[] GetProperties(object obj)
         {
