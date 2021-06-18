@@ -8,19 +8,20 @@ html {
   --h1-text-color: #FF6F00;
   --h2-text-color: #FF6F00;
   --h3-text-color: #FF6F00;
-  --header-bg-color: white;
-  --header-logo-text-color: #FF6F00;
-  --header-text-color: rgb(0, 165, 171);
-  --footer-bg-color: #303030;
+
+  --header-logo-text-color: rgb(247, 120, 12);
+  --header-text-color: #0071bc;
+  --footer-bg-color: #0071bc;
   --footer-text-color: white;
 
-  --nav-bg-color: #0082BA;
-  --nav-bg-active-color: #FFF;
-  --nav-text-color: #FFF;
-  --nav-text-hover-color: #FF6F00;
-  --nav-text-active-color: rgb(0, 165, 171, 1);
+  --nav-bg-color: white;
+  --nav-bg-active-color: white;
+  --nav-text-color: #0071bc;
+  --nav-text-hover-color: rgb(247, 120, 12);
+  --nav-text-active-color: #0071bc;
 
-  --nav-toggle-bg-color: #cecece;
+  --nav-toggle-bg-color: #0071bc;
+
   --nav-toggle-bg-active-color: var(--nav-toggle-bg-color);
   --nav-toggle-text-color: #0071bc;
   --nav-toggle-text-hover-color: #FF6F00;
@@ -45,7 +46,7 @@ body {
   margin: 0;
   padding: 0;
 }
-h1, h2, h3, h4,h5{
+h1, h2, h3, h4, h5{
   font-family: 'Merriweather', serif;
 }
 /*********** Grille globale ******************/
@@ -69,7 +70,8 @@ h1, h2, h3, h4,h5{
   padding-right: 0rem;
   align-items: center;
   background-color: #0082BA;
- 
+  height: auto; 
+
 
 }
 
@@ -93,6 +95,7 @@ h1, h2, h3, h4,h5{
   color: #FFF;
   font-family: 'Merriweather', serif;
   text-decoration: none;
+  min-height: 100px;
   padding-bottom: 1.5rem;
   padding-left: 14rem;
   padding-top: 0.4rem;
@@ -207,7 +210,7 @@ h1, h2, h3, h4,h5{
   /*center l'article dans le viewport horizontal*/
   display: flex;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 1.5rem 6em;
 }
 
 .main-article {
@@ -257,7 +260,8 @@ h1, h2, h3, h4,h5{
   font-size: 1.87rem;
   color: var(--h2-text-color);
   font-weight: 600;
-  text-align: start;
+  text-align: center;
+  display: inline-block;
 }
 
 .main-article h3 {
