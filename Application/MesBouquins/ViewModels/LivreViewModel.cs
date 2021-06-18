@@ -17,10 +17,13 @@ namespace MesBouquins.ViewModels
         DbLivres BaseLivre;
         private string titre;
         private string titreOri;
+        private string numero;
 
         private int IdDuLivre;
         public string Titre { get => titre; set { titre = value; OnPropertyChanged("Titre"); } }
         public string TitreOri { get => titreOri; set { titreOri = value; OnPropertyChanged("TitreOri"); } }
+        public string Numero { get => numero; set { numero = value; OnPropertyChanged("TitreOri"); } }
+
 
         public ICommand QuitterAppli { get; set; }
         public Action CloseAction { get; internal set; }
@@ -63,6 +66,7 @@ namespace MesBouquins.ViewModels
 
                     Titre = reader.GetString(3);
                     TitreOri = reader.IsDBNull(4) ? string.Empty : reader.GetString(4);
+                    Numero = reader.IsDBNull(4) ? string.Empty : reader.GetString(2);
 
 
                     //DataGridViewCategories.Rows.Insert(i, Convert.ToInt16(reader.GetString(0)), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
