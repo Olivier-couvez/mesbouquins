@@ -6,12 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Reflection;
+using MesBouquins.Views;
 
 namespace MesBouquins.ViewModels
 {
     class MainPageViewModel: INotifyPropertyChanged
     {
-
+        int IdLivre;
         string titre;
         string auteur;
         string collection;
@@ -89,6 +90,20 @@ namespace MesBouquins.ViewModels
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
+        }
+
+
+
+
+
+
+
+        private void clickChoix()
+        { 
+        IdLivre = 1500;
+            Livre livre = new Livre(IdLivre);
+        var result = livre.ShowDialog();
+        livre.Close();
         }
 
 

@@ -16,8 +16,11 @@ namespace MesBouquins.ViewModels
     {
         DbLivres BaseLivre;
         private string titre;
+        private string titreOri;
+
         private int IdDuLivre;
         public string Titre { get => titre; set { titre = value; OnPropertyChanged("Titre"); } }
+        public string TitreOri { get => titreOri; set { titreOri = value; OnPropertyChanged("TitreOri"); } }
 
         public ICommand QuitterAppli { get; set; }
         public Action CloseAction { get; internal set; }
@@ -40,7 +43,6 @@ namespace MesBouquins.ViewModels
             }
         }
 
-
         private void LectureLivre()
         {
             // lecture table complète de la base.
@@ -60,9 +62,10 @@ namespace MesBouquins.ViewModels
                     // Gestion  affichage du livre
 
                     Titre = reader.GetString(3);
+                    TitreOri = reader.IsDBNull(4) ? string.Empty : reader.GetString(4);
 
-                        //DataGridViewCategories.Rows.Insert(i, Convert.ToInt16(reader.GetString(0)), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
 
+                    //DataGridViewCategories.Rows.Insert(i, Convert.ToInt16(reader.GetString(0)), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
 
                 }
             }
