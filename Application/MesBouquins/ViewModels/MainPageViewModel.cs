@@ -16,19 +16,22 @@ namespace MesBouquins.ViewModels
         string auteur;
         string collection;
         string edition;
+        DateTime date;
+        int numero;
         
 
         public MainPageViewModel()
         {
+
+            InfoMenu livres = new InfoMenu();
+            List <InfoMenu> ListInfoMenu = new List<InfoMenu>();
+            DbLivres Requete = new DbLivres();
+
             
 
-            List <Livres> ListLivres = new List<Livres>();
-
+            //ListInfoMenu.Add(new InfoMenu());
 
             InitialiseListLivre();
-
-
-
 
         }
 
@@ -39,13 +42,30 @@ namespace MesBouquins.ViewModels
             Livres livres = new Livres();
             List<Livres> ListLivres = new List<Livres>();
             DbLivres dbLivre = new DbLivres();
-            var reader = dbLivre.LecturetoutLivre();
+            var reader = dbLivre.Lecture("SELECT COUNT(*) FROM tbl_livre");
+
+
+            reader.Read();
+
+            int NbEnregistrement = reader.GetInt32(0);
+
+            reader = dbLivre.Lecture("SELECT Livre_Titre FROM `tbl_livre`");
+
+            reader.Read();
+
+            
+
+            
+
+
+
+
 
             while (await reader.ReadAsync())
             {
                 ListLivres.Add(new Livres()
                 {
-                    Id_Livre = reader.GetFieldValue<int>(reader.GetOrdinal("Id_Livre")),
+                    
                     Id_Reference = reader.GetFieldValue<int>(reader.GetOrdinal("id_Reference")),
 
                     Livre_Numero =  !reader.IsDBNull(reader.GetOrdinal("Livre_Numero")) ? reader.GetFieldValue<string>(reader.GetOrdinal("Livre_Numero")) : string.Empty,
