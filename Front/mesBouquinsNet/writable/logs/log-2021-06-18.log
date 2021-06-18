@@ -1,3 +1,283 @@
+
+
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\mesbouquins\\...', 8, Array)
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(230): include('E:\\mesbouquins\\...')
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('Commun/v_templa...', Array, true)
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Controllers\Cconteneur.php(31): view('Commun/v_templa...', Array)
+#5 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\Cconteneur->detail('1')
+#6 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cconteneur))
+#7 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-06-18 06:45:13 --> Undefined variable: meta
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\mesbouquins\\...', 8, Array)
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(230): include('E:\\mesbouquins\\...')
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('Commun/v_templa...', Array, true)
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Controllers\Cconteneur.php(31): view('Commun/v_templa...', Array)
+#5 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\Cconteneur->detail('1')
+#6 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cconteneur))
+#7 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-06-18 08:02:38 --> Uncaught ErrorException: Undefined variable: meta in E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php:8
+Stack trace:
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\mesbouquins\\...', 8, Array)
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(230): include('E:\\mesbouquins\\...')
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('Commun/v_templa...', Array, true)
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\errors\html\error_404.php(88): view('Commun/v_templa...', Array)
+#5 E:\mesbouquins\siteclone\me
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-18 08:03:23 --> Uncaught ErrorException: Undefined variable: meta in E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php:8
+Stack trace:
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\mesbouquins\\...', 8, Array)
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(230): include('E:\\mesbouquins\\...')
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('Commun/v_templa...', Array, true)
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\errors\html\error_404.php(88): view('Commun/v_templa...', Array)
+#5 E:\mesbouquins\siteclone\me
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-18 08:04:54 --> Uncaught ErrorException: Undefined variable: meta in E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php:8
+Stack trace:
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\mesbouquins\\...', 8, Array)
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(230): include('E:\\mesbouquins\\...')
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('Commun/v_templa...', Array, true)
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\errors\html\error_404.php(88): view('Commun/v_templa...', Array)
+#5 E:\mesbouquins\siteclone\me
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-18 08:04:57 --> Uncaught ErrorException: Undefined variable: meta in E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php:8
+Stack trace:
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\mesbouquins\\...', 8, Array)
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(230): include('E:\\mesbouquins\\...')
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('Commun/v_templa...', Array, true)
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\errors\html\error_404.php(88): view('Commun/v_templa...', Array)
+#5 E:\mesbouquins\siteclone\me
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-18 08:04:57 --> Uncaught ErrorException: Undefined variable: meta in E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php:8
+Stack trace:
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\mesbouquins\\...', 8, Array)
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(230): include('E:\\mesbouquins\\...')
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('Commun/v_templa...', Array, true)
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\errors\html\error_404.php(88): view('Commun/v_templa...', Array)
+#5 E:\mesbouquins\siteclone\me
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-18 08:04:57 --> Uncaught ErrorException: Undefined variable: meta in E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php:8
+Stack trace:
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\mesbouquins\\...', 8, Array)
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(230): include('E:\\mesbouquins\\...')
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('Commun/v_templa...', Array, true)
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\errors\html\error_404.php(88): view('Commun/v_templa...', Array)
+#5 E:\mesbouquins\siteclone\me
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-18 08:04:57 --> Uncaught ErrorException: Undefined variable: meta in E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php:8
+Stack trace:
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\mesbouquins\\...', 8, Array)
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(230): include('E:\\mesbouquins\\...')
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('Commun/v_templa...', Array, true)
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\errors\html\error_404.php(88): view('Commun/v_templa...', Array)
+#5 E:\mesbouquins\siteclone\me
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-18 08:04:58 --> Uncaught ErrorException: Undefined variable: meta in E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php:8
+Stack trace:
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\mesbouquins\\...', 8, Array)
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(230): include('E:\\mesbouquins\\...')
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('Commun/v_templa...', Array, true)
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\errors\html\error_404.php(88): view('Commun/v_templa...', Array)
+#5 E:\mesbouquins\siteclone\me
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-18 08:04:58 --> Uncaught ErrorException: Undefined variable: meta in E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php:8
+Stack trace:
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\mesbouquins\\...', 8, Array)
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(230): include('E:\\mesbouquins\\...')
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('Commun/v_templa...', Array, true)
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\errors\html\error_404.php(88): view('Commun/v_templa...', Array)
+#5 E:\mesbouquins\siteclone\me
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-18 08:05:01 --> Uncaught ErrorException: Undefined variable: meta in E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php:8
+Stack trace:
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\mesbouquins\\...', 8, Array)
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(230): include('E:\\mesbouquins\\...')
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('Commun/v_templa...', Array, true)
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\errors\html\error_404.php(88): view('Commun/v_templa...', Array)
+#5 E:\mesbouquins\siteclone\me
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-18 08:05:03 --> Uncaught ErrorException: Undefined variable: meta in E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php:8
+Stack trace:
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\mesbouquins\\...', 8, Array)
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(230): include('E:\\mesbouquins\\...')
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('Commun/v_templa...', Array, true)
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\errors\html\error_404.php(88): view('Commun/v_templa...', Array)
+#5 E:\mesbouquins\siteclone\me
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-18 08:05:04 --> Uncaught ErrorException: Undefined variable: meta in E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php:8
+Stack trace:
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\mesbouquins\\...', 8, Array)
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(230): include('E:\\mesbouquins\\...')
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('Commun/v_templa...', Array, true)
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\errors\html\error_404.php(88): view('Commun/v_templa...', Array)
+#5 E:\mesbouquins\siteclone\me
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-18 08:06:43 --> Undefined property: App\Controllers\CUser::$input
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Controllers\CUser.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'E:\\mesbouquins\\...', 19, Array)
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\CUser->sign_up()
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CUser))
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-06-18 08:07:34 --> Undefined property: App\Controllers\CUser::$input
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Controllers\CUser.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'E:\\mesbouquins\\...', 19, Array)
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\CUser->sign_up()
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CUser))
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-06-18 08:07:34 --> Undefined property: App\Controllers\CUser::$input
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Controllers\CUser.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'E:\\mesbouquins\\...', 19, Array)
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\CUser->sign_up()
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CUser))
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-06-18 08:07:34 --> Undefined property: App\Controllers\CUser::$input
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Controllers\CUser.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'E:\\mesbouquins\\...', 19, Array)
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\CUser->sign_up()
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CUser))
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-06-18 08:07:35 --> Undefined property: App\Controllers\CUser::$input
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Controllers\CUser.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'E:\\mesbouquins\\...', 19, Array)
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\CUser->sign_up()
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CUser))
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-06-18 08:07:44 --> Undefined property: App\Controllers\CUser::$input
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Controllers\CUser.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'E:\\mesbouquins\\...', 19, Array)
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\CUser->sign_up()
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CUser))
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-06-18 08:08:55 --> Cannot call constructor
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(900): App\Controllers\CUser->__construct()
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(426): CodeIgniter\CodeIgniter->createController()
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-06-18 08:09:15 --> Cannot call constructor
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(900): App\Controllers\CUser->__construct()
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(426): CodeIgniter\CodeIgniter->createController()
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-06-18 08:09:39 --> Cannot call constructor
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(900): App\Controllers\CUser->__construct()
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(426): CodeIgniter\CodeIgniter->createController()
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-06-18 08:09:40 --> Cannot call constructor
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(900): App\Controllers\CUser->__construct()
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(426): CodeIgniter\CodeIgniter->createController()
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-06-18 08:11:44 --> Class 'App\Controllers\CI_Controller' not found
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Router\Router.php(566): include_once()
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Router\Router.php(169): CodeIgniter\Router\Router->autoRoute('CUser/sign_up')
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(809): CodeIgniter\Router\Router->handle('CUser/sign_up')
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(389): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-06-18 08:40:17 --> Uncaught ErrorException: Undefined variable: meta in E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php:8
+Stack trace:
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\mesbouquins\\...', 8, Array)
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(230): include('E:\\mesbouquins\\...')
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('Commun/v_templa...', Array, true)
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\errors\html\error_404.php(88): view('Commun/v_templa...', Array)
+#5 E:\mesbouquins\siteclone\me
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-18 08:41:13 --> Uncaught ErrorException: Undefined variable: meta in E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php:8
+Stack trace:
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\Commun\v_template.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\mesbouquins\\...', 8, Array)
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(230): include('E:\\mesbouquins\\...')
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('Commun/v_templa...', Array, true)
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\app\Views\errors\html\error_404.php(88): view('Commun/v_templa...', Array)
+#5 E:\mesbouquins\siteclone\me
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-18 08:43:54 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-18 08:46:35 --> Class 'CI_Controller' not found
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Router\Router.php(566): include_once()
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Router\Router.php(169): CodeIgniter\Router\Router->autoRoute('Users/index')
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(809): CodeIgniter\Router\Router->handle('Users/index')
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(389): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-06-18 08:49:48 --> Class 'CI_Controller' not found
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Router\Router.php(566): include_once()
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Router\Router.php(169): CodeIgniter\Router\Router->autoRoute('Users/index')
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(809): CodeIgniter\Router\Router->handle('Users/index')
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(389): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-06-18 08:50:15 --> Cannot declare class Users, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-18 08:50:48 --> Cannot call constructor
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(900): App\Controllers\Users->__construct()
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(426): CodeIgniter\CodeIgniter->createController()
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-06-18 08:57:19 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-06-18 08:59:13 --> Class 'CodeIgniter\CI_Controller' not found
+#0 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Router\Router.php(566): include_once()
+#1 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Router\Router.php(169): CodeIgniter\Router\Router->autoRoute('Users/index')
+#2 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(809): CodeIgniter\Router\Router->handle('Users/index')
+#3 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(389): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#4 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\mesbouquins\siteclone\mesbouquins\Front\mesBouquinsNet\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-06-18 09:20:20 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+=======
 ERROR - 2021-06-18 04:28:22 --> La table 'mesbouquins.conteneur' n'existe pas
 CRITICAL - 2021-06-18 04:28:22 --> La table 'mesbouquins.conteneur' n'existe pas
 #0 C:\Users\TPCDA\Desktop\1806GitmesBouquins\mesbouquins\Front\mesBouquinsNet\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT COUNT(*)...')
