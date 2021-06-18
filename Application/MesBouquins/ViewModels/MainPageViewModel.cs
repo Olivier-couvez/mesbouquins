@@ -52,29 +52,35 @@ namespace MesBouquins.ViewModels
 
             reader = dbLivre.Lecture("SELECT Livre_Titre FROM `tbl_livre`");
 
+            
+
             reader.Read();
 
-            
-
-            
+            string test = reader.GetString(0);
 
 
 
 
 
-            while (await reader.ReadAsync())
-            {
-                ListLivres.Add(new Livres()
-                {
-                    
-                    Id_Reference = reader.GetFieldValue<int>(reader.GetOrdinal("id_Reference")),
 
-                    Livre_Numero =  !reader.IsDBNull(reader.GetOrdinal("Livre_Numero")) ? reader.GetFieldValue<string>(reader.GetOrdinal("Livre_Numero")) : string.Empty,
-                    Livre_Titre = !reader.IsDBNull(reader.GetOrdinal("Livre_Titre")) ?  reader.GetFieldValue<string>(reader.GetOrdinal("Livre_Titre")) : string.Empty,
-                    Livre_Sous_Titre = !reader.IsDBNull(reader.GetOrdinal("Livre_Sous_Titre")) ?  reader.GetFieldValue<string>(reader.GetOrdinal("Livre_Sous_Titre")) : string.Empty,
-                });
+
+
+
+            ////while (await reader.ReadAsync())
+            ////{
+            ////    ListLivres.Add(new Livres()
+            ////    {
+            ////        Livre_Titre = !reader.IsDBNull(reader.GetOrdinal("Livre_Titre")) ? reader.GetFieldValue<string>(reader.GetOrdinal("Livre_Titre")) : string.Empty,
+            ////        Livre_Numero = !reader.IsDBNull(reader.GetOrdinal("Livre_Numero")) ? reader.GetFieldValue<string>(reader.GetOrdinal("Livre_Numero")) : string.Empty,
+            ////        //auteur
+            ////        //Id_Reference = reader.GetFieldValue<int>(reader.GetOrdinal("id_Reference")),
+
+            ////        //Livre_Numero =  !reader.IsDBNull(reader.GetOrdinal("Livre_Numero")) ? reader.GetFieldValue<string>(reader.GetOrdinal("Livre_Numero")) : string.Empty,
+
+            ////        //Livre_Sous_Titre = !reader.IsDBNull(reader.GetOrdinal("Livre_Sous_Titre")) ?  reader.GetFieldValue<string>(reader.GetOrdinal("Livre_Sous_Titre")) : string.Empty,
+            ////    });
                 
-            };
+            //};
         }
 
         private static PropertyInfo[] GetProperties(object obj)
