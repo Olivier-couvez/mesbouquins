@@ -5,10 +5,10 @@ html {
   --main-pink-color: rgb(226, 1, 107); */
   --main-text-color: #444444;
   --main-a-color: #0071bc;
-  --h1-text-color: rgb(247, 120, 12);
-  --h2-text-color: rgb(247, 120, 12);
-  --h3-text-color: rgb(247, 120, 12);
-  --header-bg-color: white;
+  --h1-text-color: #FF6F00;
+  --h2-text-color: #FF6F00;
+  --h3-text-color: #FF6F00;
+
   --header-logo-text-color: rgb(247, 120, 12);
   --header-text-color: #0071bc;
   --footer-bg-color: #0071bc;
@@ -21,10 +21,11 @@ html {
   --nav-text-active-color: #0071bc;
 
   --nav-toggle-bg-color: #0071bc;
+
   --nav-toggle-bg-active-color: var(--nav-toggle-bg-color);
-  --nav-toggle-text-color: white;
-  --nav-toggle-text-hover-color: var(--nav-toggle-text-color);
-  --nav-toggle-text-active-color: var(--nav-toggle-text-color);
+  --nav-toggle-text-color: #0071bc;
+  --nav-toggle-text-hover-color: #FF6F00;
+  --nav-toggle-text-active-color: #FF4100;
 
   --gallery-item-border-color: #dedede;
 }
@@ -71,6 +72,7 @@ h1, h2, h3, h4, h5{
   background-color: #0082BA;
   height: auto; 
 
+
 }
 
 .main-header {
@@ -87,10 +89,11 @@ h1, h2, h3, h4, h5{
 /*********** Logo ******************/
 .header-logo {
   display: inline-block;
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 3rem;
+  line-height: 10rem;
   height: fit-content;
-  color: var(--header-logo-text-color);
+  color: #FFF;
+  font-family: 'Merriweather', serif;
   text-decoration: none;
   min-height: 100px;
   padding-bottom: 1.5rem;
@@ -357,7 +360,7 @@ h1, h2, h3, h4, h5{
   background-color: var(--footer-bg-color);
   /* fixer la largeur maxi du contenu (1170p + 30px de marge = 1200px) */
   width: 100%;
-  max-width: 1170px;
+ 
   padding: 1.5rem;
 }
 
