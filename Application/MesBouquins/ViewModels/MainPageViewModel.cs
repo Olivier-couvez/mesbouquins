@@ -106,7 +106,7 @@ namespace MesBouquins.ViewModels
 
         private void clickChoix()
         { 
-        IdLivre = 1500;
+        IdLivre = 30565;
             Livre livre = new Livre(IdLivre);
         var result = livre.ShowDialog();
         livre.Close();

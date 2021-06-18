@@ -11,10 +11,10 @@ namespace MesBouquins.Models
     {
         private Int16 id_Collection;
         private string collection_Nom;
-        private Int16 livre_Numero;
+        private Int16 id_Logo_Collection;
 
         public Int16 Id_Collection { get => id_Collection; set => id_Collection = value; }
         public string Collection_Nom { get => collection_Nom; set => collection_Nom = value; }
-        public Int16 Livre_Numero { get => livre_Numero; set => livre_Numero = value; }
+        public Int16 Id_Logo_Collection { get => id_Logo_Collection; set => id_Logo_Collection = value; }
     }
 }

@@ -33,7 +33,7 @@ namespace MesBouquins.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            IdLivre = 1500;
+            IdLivre = 3356;
             Livre livre = new Livre(IdLivre);
             var result = livre.ShowDialog();
             livre.Close();          
