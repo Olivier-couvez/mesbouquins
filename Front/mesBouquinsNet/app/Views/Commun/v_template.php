@@ -66,9 +66,14 @@
             <input type="checkbox" id="nav-toggle">
            <nav class="main-nav">
                 <ul>
-                    <li class="active"><a href="">Accueil</a></li>
-                    <li><a href="Forum</a></li>
-                    <li><a href="Les conteneurs</a></li>
+
+                    <li class="active"><a href="<?= base_url("Caccueil/index")?>">Accueil</a></li>
+                    <li><a href="<?= base_url("/Forum")?>">Forum</a></li>
+                    <li><a href="<?= base_url("Crecherche/index")?>">Livres</a></li>
+                    <li><a href="<?= base_url("CrechercheCollection/index")?>">Collections</a></li>
+                    <li><a href="<?= base_url("CrechercheEdition/index")?>">Editions</a></li>
+                    <li><a href="<?= base_url("CrechercheAuteur/index")?>">Auteurs</a></li>
+
                 </ul>
             </nav>-->
             

@@ -4,10 +4,10 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class MrechercheResultat extends Model
+class MrechercheEdition extends Model
 {	
-	protected $table = 'tbl_Livre';
-	protected $primaryKey = 'Id_Livre';	
+	protected $table = 'tbl_Edition';
+	protected $primaryKey = 'Id_Edition';	
 	protected $returnType= 'array';
 	
 	public function getAll(){
@@ -16,9 +16,8 @@ class MrechercheResultat extends Model
 		return $requete->paginate(20);
 	}
 	
-	public function getDetailCollection($prmId){
-		$requete = $this->select('*')->where(['Id_Livre' => $prmId]);
+	public function getDetail($prmId){
+		$requete = $this->select('*')->where(['Id_Edition' => $prmId]);
 		return $requete->findAll();
 	}
-	
 }

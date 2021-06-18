@@ -2,29 +2,29 @@
 
 namespace App\Controllers;
 use CodeIgniter\Controller;
-use App\Models\MrechercheResultat;
+use App\Models\MrechercheCollection;
 use \CodeIgniter\Exceptions\PageNotFoundException;
 
-class Crecherche extends Controller
+class CrechercheCollection extends Controller
 {
 	public function index()
 	{
-		$model = new MrechercheResultat();
+		$model = new MrechercheCollection();
 		$data['result'] = $model->getAll();
-		$data['page_title']="Recherche";
+		$data['page_title']="Collections";
 		$data['page_titre1']="Recherche précise :";
         $data['heading'] ="Page détaillée ";
         $page['titrePage']="Page détaillée ";
-		$page['meta']="Ceci est une recherch détaillée";
+		$page['meta']="Ceci est une recherche de collection";
 		$data['pager'] = $model->pager;
-		$page['contenu'] = view('Recherche/v_liste_recherche_resultat', $data);
+		$page['contenu'] = view('Recherche/v_liste_recherche_collection', $data);
 		return view('Commun/v_template', $page);
 	}
 	public function detail($prmId = null)
     {
         if ($prmId != null) {
-            $model = new MrechercheResultat();
-            $data['result'] = $model->getDetail($prmId);
+            $model = new MrechercheCollection();
+            $data['result'] = $model->getDetailCollection($prmId);
             if (count($data['result']) != 0) {
                 $data['title'] = "Détail d'un conteneur";
                 $data['heading'] = "Conteneur ID = " . $prmId;

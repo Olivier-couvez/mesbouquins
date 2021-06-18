@@ -1,6 +1,6 @@
 <article class="main-article">
     <h1>
-    <?= $heading; ?>
+    <?= $page_titre1;?>
     </h1>
 
     <?php 
