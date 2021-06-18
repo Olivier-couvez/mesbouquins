@@ -17,6 +17,8 @@ use CodeIgniter\Config\AutoloadConfig;
  */
 class Autoload extends AutoloadConfig
 {
+	
+
 	/**
 	 * -------------------------------------------------------------------
 	 * Namespaces
@@ -82,3 +84,8 @@ class Autoload extends AutoloadConfig
 	 */
 	public $files = [];
 }
+// Auto-load Libraries 
+$autoload['libraries'] = array('database', 'session'); 
+ 
+// Auto-load Helper Files 
+$autoload['helper'] = array('url');

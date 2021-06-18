@@ -23,7 +23,7 @@ class App extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $baseURL = 'http://conteneurs.local/public/';
+	public $baseURL = 'http://mes-bouquins/public/';
 
 	/**
 	 * --------------------------------------------------------------------------

@@ -36,10 +36,26 @@
 <body>
 
 <div class="page-wrapper">
+
+<!-- The sidebar -->
+
+
+
     <div class="header-wrapper">
         <header class="main-header">
             <a class="header-logo" href="<?= base_url("Caccueil/index")?>">Mes Bouquins.net</a>
-            <label for="nav-toggle">
+
+<nav>
+</nav>
+<div class="sidebar">
+  <a class="active" href="<?= base_url("Caccueil/index")?>">Accueil</a>
+  <a href="<?= base_url("/Forum")?>">Forum</a>
+  <a href="<?= base_url("Users/index")?>">Inscription</a>
+  <a href="#about">About</a>
+</div>
+
+
+         <!--    <label for="nav-toggle">
                 <span class="nav-toogle-text">Afficher / Cacher le menu</span>
                 <div class="nav-toggle-button">
                     <span></span>
@@ -48,18 +64,22 @@
                 </div>
             </label>
             <input type="checkbox" id="nav-toggle">
-            <nav class="main-nav">
+           <nav class="main-nav">
                 <ul>
-                    <li class="active"><a href="<?= base_url("Caccueil/index")?>">Accueil</a></li>
-                    <li><a href="<?= base_url("/Forum")?>">Forum</a></li>
-                    <li><a href="<?= base_url("Cconteneur/index")?>">Les conteneurs</a></li>
+                    <li class="active"><a href="">Accueil</a></li>
+                    <li><a href="Forum</a></li>
+                    <li><a href="Les conteneurs</a></li>
                 </ul>
-            </nav>
+            </nav>-->
             
         </header>
       
     </div>
+    
+   
+
     <div class="article-wrapper">
+    
         
     <?php
      echo $contenu;
