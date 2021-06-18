@@ -52,7 +52,10 @@
                 <ul>
                     <li class="active"><a href="<?= base_url("Caccueil/index")?>">Accueil</a></li>
                     <li><a href="<?= base_url("/Forum")?>">Forum</a></li>
-                    <li><a href="<?= base_url("Cconteneur/index")?>">Les conteneurs</a></li>
+                    <li><a href="<?= base_url("Crecherche/index")?>">Livres</a></li>
+                    <li><a href="<?= base_url("CrechercheCollection/index")?>">Collections</a></li>
+                    <li><a href="<?= base_url("CrechercheEdition/index")?>">Editions</a></li>
+                    <li><a href="<?= base_url("CrechercheAuteur/index")?>">Auteurs</a></li>
                 </ul>
             </nav>
             
