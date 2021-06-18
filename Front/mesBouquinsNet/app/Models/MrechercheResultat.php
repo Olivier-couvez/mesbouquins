@@ -4,23 +4,21 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Mconteneur extends Model
+class MrechercheResultat extends Model
 {	
-	protected $table = 'conteneur';
-	protected $primaryKey = 'id';	
+	protected $table = 'tbl_Livre';
+	protected $primaryKey = 'Id_Livre';	
 	protected $returnType= 'array';
 	
 	public function getAll(){
-		$requete = $this->select('Id, AddrEmplacement');
+		$requete = $this->select('*');
 		// return $requete->findAll();
-		return $requete->paginate(10);
+		return $requete->paginate(20);
 	}
 	
-	public function getDetail($prmId){
-	$requete = $this->select('*')
-	->where(['Id' => $prmId]);
-	return $requete->findAll();
+	public function getDetailCollection($prmId){
+		$requete = $this->select('*')->where(['Id_Livre' => $prmId]);
+		return $requete->findAll();
 	}
-
 	
 }
