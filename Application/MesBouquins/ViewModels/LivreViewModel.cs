@@ -16,12 +16,12 @@ namespace MesBouquins.ViewModels
     {
         public class Auteur
         {
-            public Auteur(string name, string matches)
+            public Auteur(string nom)
             {
                 Nom = nom;
             }
 
-            public string Non { get; set; }
+            public string Nom { get; set; }
         }
 
         public class ItemHandler
@@ -43,7 +43,7 @@ namespace MesBouquins.ViewModels
             get { return _itemHandler.Auteurs; }
         }
 
-        private readonly ItemHandler _itemHandler;
+        private ItemHandler _itemHandler;
 
         private string tempAuteur;
 
@@ -225,7 +225,7 @@ namespace MesBouquins.ViewModels
                         {
                             while (readerpse.Read())
                             {
-                                tempAuteur = readerlan.IsDBNull(0) ? string.Empty : readerlan.GetString(0)
+                                tempAuteur = readerlan.IsDBNull(0) ? string.Empty : readerlan.GetString(0);
                                 _itemHandler.Add(new Auteur(tempAuteur));
                             }
 
