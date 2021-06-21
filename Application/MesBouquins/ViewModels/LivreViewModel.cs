@@ -216,16 +216,16 @@ namespace MesBouquins.ViewModels
                     MySqlDataReader readerpse = BasePseudo.LectureUnAuteur(Convert.ToInt16(IdDuLivre));
 
 
-                    if (readerlan != null)          // on teste si la requete a bien retournéer un résultat
+                    if (readerpse != null)          // on teste si la requete a bien retournéer un résultat
                     {
 
                         // Vérifie si des données sont présente dans reader
 
-                        if (readerlan.HasRows)
+                        if (readerpse.HasRows)
                         {
                             while (readerpse.Read())
                             {
-                                tempAuteur = readerlan.IsDBNull(0) ? string.Empty : readerlan.GetString(0);
+                                tempAuteur = readerpse.IsDBNull(0) ? string.Empty : readerpse.GetString(0);
                                 _itemHandler.Add(new Auteur(tempAuteur));
                             }
 
