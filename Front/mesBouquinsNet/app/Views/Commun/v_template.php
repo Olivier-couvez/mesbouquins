@@ -50,12 +50,16 @@
 <div class="sidebar">
   <a class="active" href="<?= base_url("Caccueil/index")?>">Accueil</a>
   <a href="<?= base_url("/Forum")?>">Forum</a>
-  <a href="<?= base_url("Users/index")?>">Inscription</a>
-  <a href="#about">About</a>
+  <a href="<?= base_url("Crecherche/index")?>">Livres</a>
+  <a href="<?= base_url("CrechercheCollection/index")?>">Collections</a>
+  <a href="<?= base_url("CrechercheEdition/index")?>">Editions</a>
+  <a href="<?= base_url("CrechercheAuteur/index")?>">Auteurs</a>
+  <!-- <a href="<?= base_url("Users/index")?>">Inscription</a> -->
+
 </div>
 
-
-         <!--    <label for="nav-toggle">
+<!-- 
+             <label for="nav-toggle">
                 <span class="nav-toogle-text">Afficher / Cacher le menu</span>
                 <div class="nav-toggle-button">
                     <span></span>
@@ -63,8 +67,8 @@
                     <span></span>
                 </div>
             </label>
-            <input type="checkbox" id="nav-toggle">
-           <nav class="main-nav">
+            <input type="checkbox" id="nav-toggle"> -->
+           <!-- <nav class="main-nav">
                 <ul>
 
                     <li class="active"><a href="<?= base_url("Caccueil/index")?>">Accueil</a></li>
@@ -75,7 +79,7 @@
                     <li><a href="<?= base_url("CrechercheAuteur/index")?>">Auteurs</a></li>
 
                 </ul>
-            </nav>-->
+            </nav> -->
             
         </header>
       

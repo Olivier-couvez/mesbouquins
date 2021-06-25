@@ -156,11 +156,9 @@ h1, h2, h3, h4, h5{
   width: 200px;
   background-color: #f1f1f1;
   position: fixed;
-  height: 400px;
+  /* height: 400px; */
   overflow: auto;
-  top:135px;
-  left:80px
-  
+  top: 135px;
 }
 
 /* Sidebar links */
