@@ -77,7 +77,8 @@
             // est crée normalement. Sinon, il désigne le champ pour créer la requête
             // count()
             $table = 'mesbouquins';
-            $champs = '*';	
+            $champs = 'Tbl_Livre';
+            $select = '*';
 
                 //début Fonction de recherche
                 function requete($table,$champs,$select,$order,$sens,$limit_start,$limit_nb,
@@ -172,7 +173,6 @@
                     <a href="<?= base_url("CrechercheCollection/index")?>"><li>Collections</li></a>
                     <a href="<?= base_url("CrechercheEdition/index")?>"><li>Éditions</li></a>
                     <a href="<?= base_url("CrechercheAuteur/index")?>"><li>Auteurs</li></a>
-                    <a href="<?= base_url("Users/index")?>"><li>Utilisateurs</li></a>
                     </ul>
                 </div>
             </nav>
