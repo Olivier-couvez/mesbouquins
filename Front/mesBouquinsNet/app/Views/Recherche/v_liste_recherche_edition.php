@@ -1,7 +1,7 @@
 <article class="main-article">
-    <h1>
-    <?= $page_titre1; ?>
-    </h1>
+
+    <h1>Liste des Éditions diponibles : </h1>
+    <?php echo $pager->links(); ?>
 
     <?php 
     if (count($result) != 0 ){  ?>
@@ -13,9 +13,8 @@
         <div class="container-image">
         </div>
         <div class="container-infos-livre">
-        <b>Id : </b>
-        <?=$row['Id_Edition'].
-        '/ nom de la collection :' .$row['Edition_Nom']; ?>        
+        Titre :
+        <b><?=$row['Edition_Nom']; ?></b>        
         </div>
         <div class="container-notations">
         </div>

@@ -1,7 +1,8 @@
 <article class="main-article">
-    <h1>
-    <?= $page_titre1; ?>
-    </h1>
+
+    <h1>Liste des Collections disponibles : </h1>
+
+    <?php echo $pager->links(); ?>
 
     <?php 
     if (count($result) != 0 ){  ?>
@@ -13,8 +14,8 @@
         <div class="container-image">
         </div>
         <div class="container-infos-livre">
-        <?='/ id de la collection :' .$row['Id_Collection'].
-        '/ nom de la collection :' .$row['Collection_Nom']; ?>
+            Titre : 
+       <b><?=$row['Collection_Nom']; ?></b>
         </div>
         <div class="container-notations">
         </div>

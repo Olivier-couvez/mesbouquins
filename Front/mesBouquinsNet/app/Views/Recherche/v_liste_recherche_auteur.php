@@ -1,7 +1,8 @@
 <article class="main-article">
-    <h1>
-    <?= $page_titre1; ?>
-    </h1>
+
+    <h1>Liste des Auteurs disponibles : </h1>
+
+    <?php echo $pager->links(); ?>
 
     <?php 
     if (count($result) != 0 ){  ?>
@@ -11,23 +12,24 @@
    <li>
         <div class="container-liste-recherche">
             <div class="container-image">
+
             </div>
-            <div class="container-infos-livre">
-            
-            <b>Nom : </b>
-            <?=$row['Pseudo_Nom_Particule']
+            <div class="container-infos-livre">            
+            <b><?=$row['Pseudo_Nom_Particule']
             .$row['Pseudo_Nom']
             .' ' .$row['Pseudo_Prenom']
-            ?>
-            <b>Naissance : </b>
-            <?=
+            ?> </b>
+            Naissance :
+            <b><?=
             $row['Pseudo_Naissance']
+            ?> </b>
+            Décès :
+            <b><?=
+            // if('Pseudo_Deces' != null){
+            $row['Pseudo_Deces'];
+            // }
             ?>
-            <b>Décès : </b>
-            <?=
-            $row['Pseudo_Deces']                
-            ; ?>
-            </div>
+            </div> </b>
             <div class="container-notations">
             </div>        
         </div>
