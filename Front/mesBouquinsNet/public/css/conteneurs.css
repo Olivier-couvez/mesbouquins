@@ -114,7 +114,7 @@ h1, h2, h3, h4, h5{
 
 /*********** NAV Toggle button ******************/
 /* Toggle button HTML/CSS https://code.visualstudio.com/docs */
-/*.nav-toggle-button {
+.nav-toggle-button {
   float: right;
   display: flex;
   flex-flow: column wrap;
@@ -145,8 +145,7 @@ h1, h2, h3, h4, h5{
 #nav-toggle:checked+nav ul {
   display: flex;
   flex-flow: column nowrap;
-}*/
-
+}
 
 
 
